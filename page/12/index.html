@@ -1,0 +1,2832 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="鸭脖，麻辣的" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="在沪的中原汉子">
+<meta property="og:type" content="website">
+<meta property="og:title" content="鸭脖，麻辣的">
+<meta property="og:url" content="http://yoursite.com/page/12/index.html">
+<meta property="og:site_name" content="鸭脖，麻辣的">
+<meta property="og:description" content="在沪的中原汉子">
+<meta property="article:author" content="鸭脖">
+<meta property="article:tag" content="计算机视觉、C++、终端芯片">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/page/12/"/>
+
+
+
+
+
+  <title>鸭脖，麻辣的</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+  <a href="https://github.com/caesar-yabo" target="_blank" rel="noopener"><img width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_left_red_aa0000.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">鸭脖，麻辣的</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">华东师范大学 | 统计学 | 计算机视觉er</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/07/LeetCode_Cpp/0148._Sort%20_list/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="鸭脖">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/header2.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鸭脖，麻辣的">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/04/07/LeetCode_Cpp/0148._Sort%20_list/" itemprop="url">148.Sort list</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-07T00:00:00+08:00">
+                2020-04-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="148-Sort-list"><a href="#148-Sort-list" class="headerlink" title="148.Sort list"></a>148.Sort list</h1><p><strong><font color=red>�Ѷ�Medium</font></strong></p>
+<h2 id="ˢ������"><a href="#ˢ������" class="headerlink" title="ˢ������"></a>ˢ������</h2><blockquote>
+<p>ԭ������</p>
+</blockquote>
+<ul>
+<li><a href="https://leetcode.com/problems/sort-list/" target="_blank" rel="noopener">https://leetcode.com/problems/sort-list/</a></li>
+</ul>
+<blockquote>
+<p>��������</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Sort a linked list in O(n log n) time using constant space complexity.</span><br><span class="line"></span><br><span class="line">Example 1:</span><br><span class="line"></span><br><span class="line">Input: 4-&gt;2-&gt;1-&gt;3</span><br><span class="line">Output: 1-&gt;2-&gt;3-&gt;4</span><br><span class="line">Example 2:</span><br><span class="line"></span><br><span class="line">Input: -1-&gt;5-&gt;3-&gt;4-&gt;0</span><br><span class="line">Output: -1-&gt;0-&gt;3-&gt;4-&gt;5</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>˼·<br><strong>**</strong>- ʱ�临�Ӷ�: O(nlgn)<strong>**</strong>- �ռ临�Ӷ�: O(n)<strong>**</strong></p>
+</blockquote>
+<p>���˼·ͷ͵�˸���������c++�е� sort() �㷨���ֽ������е� val ���δ����������У���������������򡣽����ٰ������е�����������м��ɡ�</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(NULL) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">sortList</span><span class="params">(ListNode* head)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v;</span><br><span class="line">        ListNode* current = head;</span><br><span class="line">        <span class="keyword">while</span>(current)</span><br><span class="line">        &#123;</span><br><span class="line">            v.push_back(current -&gt;val);</span><br><span class="line">            current = current -&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        sort(v.begin(),v.end());</span><br><span class="line">        current = head;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(current)</span><br><span class="line">        &#123;</span><br><span class="line">            current -&gt;val = v[i++];</span><br><span class="line">            current = current -&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/07/LeetCode_Cpp/0145._Binary_Tree_Postorder_Traversal/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="鸭脖">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/header2.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鸭脖，麻辣的">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/04/07/LeetCode_Cpp/0145._Binary_Tree_Postorder_Traversal/" itemprop="url">145. Binary Tree Postorder Traversal</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-07T00:00:00+08:00">
+                2020-04-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="145-Binary-Tree-Postorder-Traversal"><a href="#145-Binary-Tree-Postorder-Traversal" class="headerlink" title="145. Binary Tree Postorder Traversal"></a>145. Binary Tree Postorder Traversal</h1><p><strong><font color=red>�Ѷ�:Hard<font></strong></p>
+<h2 id="ˢ������"><a href="#ˢ������" class="headerlink" title="ˢ������"></a>ˢ������</h2><blockquote>
+<p>ԭ������</p>
+</blockquote>
+<ul>
+<li><a href="https://leetcode.com/problems/binary-tree-postorder-traversal/" target="_blank" rel="noopener">https://leetcode.com/problems/binary-tree-postorder-traversal/</a></li>
+</ul>
+<blockquote>
+<p>��������</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Given a binary tree, return the postorder traversal of its nodes&#39; values.</span><br><span class="line"></span><br><span class="line">Example:</span><br><span class="line"></span><br><span class="line">Input: [1,null,2,3]</span><br><span class="line">   1</span><br><span class="line">    \</span><br><span class="line">     2</span><br><span class="line">    &#x2F;</span><br><span class="line">   3</span><br><span class="line"></span><br><span class="line">Output: [3,2,1]</span><br><span class="line">Follow up: Recursive solution is trivial, could you do it iteratively?</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>˼·1<br><strong>**</strong>- ʱ�临�Ӷ�: O(N)<strong>**</strong>- �ռ临�Ӷ�: O(1)<strong>**</strong></p>
+</blockquote>
+<p>������������������ж��������治���ڣ����ж��������治���ڣ��������root-&gt;val���ɡ�</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * struct TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode *left;</span></span><br><span class="line"><span class="comment"> *     TreeNode *right;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x) : val(x), left(NULL), right(NULL) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">travel</span><span class="params">(TreeNode* root,<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; v)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!root)</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        <span class="keyword">if</span>(root -&gt;left)</span><br><span class="line">            travel(root -&gt;left,v);   </span><br><span class="line">        <span class="keyword">if</span>(root -&gt;right)</span><br><span class="line">            travel(root -&gt;right,v);</span><br><span class="line">        v.push_back(root -&gt;val);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">postorderTraversal</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v;</span><br><span class="line">        travel(root,v);</span><br><span class="line">        <span class="keyword">return</span> v;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>˼·2<br><strong>**</strong>- ʱ�临�Ӷ�: O(N)<strong>**</strong>- �ռ临�Ӷ�: O(N)<strong>**</strong></p>
+</blockquote>
+<p>��Ŀ���ᵽ�˲��õݹ��ñ����ķ�ʽȥ���������⡣��ô���Ǿ���Ҫ��ջȥ����Ԫ�أ���ʱ�����ǻ���Ҫһ������ջ��������Ԫ���Ƿ�Ӧ�� pop��</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * struct TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode *left;</span></span><br><span class="line"><span class="comment"> *     TreeNode *right;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x) : val(x), left(NULL), right(NULL) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">postorderTraversal</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">            <span class="built_in">vector</span>&lt;TreeNode*&gt; v;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; ans;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; count1;</span><br><span class="line">        <span class="keyword">if</span>(root)</span><br><span class="line">        &#123;</span><br><span class="line">            v.push_back(root);</span><br><span class="line">            count1.push_back(<span class="number">0</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(v.size())</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> index = v.size();</span><br><span class="line">            <span class="keyword">if</span>(!count1[index - <span class="number">1</span>] &amp;&amp; v[index <span class="number">-1</span>] -&gt;left)</span><br><span class="line">            &#123;</span><br><span class="line">                count1[index - <span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">                v.push_back(v[index - <span class="number">1</span>] -&gt;left);</span><br><span class="line">                count1.push_back(<span class="number">0</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(count1[index - <span class="number">1</span>] != <span class="number">2</span> &amp;&amp; v[index - <span class="number">1</span>] -&gt;right)</span><br><span class="line">            &#123;</span><br><span class="line">                count1[index - <span class="number">1</span>] = <span class="number">2</span>;</span><br><span class="line">                v.push_back(v[index - <span class="number">1</span>] -&gt;right);</span><br><span class="line">                count1.push_back(<span class="number">0</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                ans.push_back(v[index - <span class="number">1</span>] -&gt;val);</span><br><span class="line">                count1.pop_back();</span><br><span class="line">                v.pop_back();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/07/LeetCode_Cpp/0147._Insert_on_Sort_List/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="鸭脖">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/header2.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鸭脖，麻辣的">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/04/07/LeetCode_Cpp/0147._Insert_on_Sort_List/" itemprop="url">147. Insertion Sort List</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-07T00:00:00+08:00">
+                2020-04-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="147-Insertion-Sort-List"><a href="#147-Insertion-Sort-List" class="headerlink" title="147. Insertion Sort List"></a>147. Insertion Sort List</h1><p><strong><font color=red>�Ѷ�:Medium<font></strong></p>
+<h2 id="ˢ������"><a href="#ˢ������" class="headerlink" title="ˢ������"></a>ˢ������</h2><blockquote>
+<p>ԭ������</p>
+</blockquote>
+<ul>
+<li><a href="https://leetcode.com/problems/insertion-sort-list/" target="_blank" rel="noopener">https://leetcode.com/problems/insertion-sort-list/</a></li>
+</ul>
+<blockquote>
+<p>��������</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">Sort a linked list using insertion sort.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">A graphical example of insertion sort. The partial sorted list (black) initially contains only the first element in the list.</span><br><span class="line">With each iteration one element (red) is removed from the input data and inserted in-place into the sorted list</span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">Algorithm of Insertion Sort:</span><br><span class="line"></span><br><span class="line">Insertion sort iterates, consuming one input element each repetition, and growing a sorted output list.</span><br><span class="line">At each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there.</span><br><span class="line">It repeats until no input elements remain.</span><br><span class="line"></span><br><span class="line">Example 1:</span><br><span class="line"></span><br><span class="line">Input: 4-&gt;2-&gt;1-&gt;3</span><br><span class="line">Output: 1-&gt;2-&gt;3-&gt;4</span><br><span class="line">Example 2:</span><br><span class="line"></span><br><span class="line">Input: -1-&gt;5-&gt;3-&gt;4-&gt;0</span><br><span class="line">Output: -1-&gt;0-&gt;3-&gt;4-&gt;5</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>˼·<br><strong>**</strong>- ʱ�临�Ӷ�: O(N^2)<strong>**</strong>- �ռ临�Ӷ�: O(1)<strong>**</strong></p>
+</blockquote>
+<p>���������в������򡣺���ͨ�Ĳ�������һ��������Ҫע����Ҫ�������Ĳ�������Ϥ����ĳ��ֵ�������е�λ��ʱ��Ҫ������ڵ���뵽���ʵ�λ�ã�ִ�����������Ĳ����ɾ��������</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(NULL) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">insertionSortList</span><span class="params">(ListNode* head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!head)</span><br><span class="line">            <span class="keyword">return</span> head;</span><br><span class="line">            ListNode* current = head -&gt;next;</span><br><span class="line">        ListNode* pre = head;</span><br><span class="line">        <span class="keyword">while</span>(current)</span><br><span class="line">        &#123;</span><br><span class="line">            ListNode* temp2 = head;</span><br><span class="line">            ListNode* temp1 = head;</span><br><span class="line">            <span class="keyword">while</span>(temp2 -&gt;val &lt; current -&gt;val)</span><br><span class="line">            &#123;</span><br><span class="line">                temp1 = temp2;</span><br><span class="line">                temp2 = temp2 -&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(temp1 != temp2)</span><br><span class="line">                temp1 -&gt;next = current;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                head = current;</span><br><span class="line">            <span class="keyword">if</span>(temp2 != current)</span><br><span class="line">            &#123;</span><br><span class="line">                pre -&gt;next = current -&gt;next;</span><br><span class="line">                current -&gt;next = temp2;</span><br><span class="line">                current = pre -&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                pre = current;</span><br><span class="line">                current = current -&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/07/LeetCode_Cpp/0151._Reverse_Words_in_a_String/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="鸭脖">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/header2.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鸭脖，麻辣的">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/04/07/LeetCode_Cpp/0151._Reverse_Words_in_a_String/" itemprop="url">151. Reverse Words in a String</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-07T00:00:00+08:00">
+                2020-04-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="151-Reverse-Words-in-a-String"><a href="#151-Reverse-Words-in-a-String" class="headerlink" title="151. Reverse Words in a String"></a>151. Reverse Words in a String</h1><p><strong><font color=red>�Ѷ�:Medium<font></strong></p>
+<h2 id="ˢ������"><a href="#ˢ������" class="headerlink" title="ˢ������"></a>ˢ������</h2><blockquote>
+<p>ԭ������</p>
+</blockquote>
+<ul>
+<li><a href="https://leetcode.com/problems/reverse-words-in-a-string/" target="_blank" rel="noopener">https://leetcode.com/problems/reverse-words-in-a-string/</a></li>
+</ul>
+<blockquote>
+<p>��������</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Given an input string, reverse the string word by word.</span><br><span class="line"></span><br><span class="line">Example:  </span><br><span class="line"></span><br><span class="line">Input: &quot;the sky is blue&quot;,</span><br><span class="line">Output: &quot;blue is sky the&quot;.</span><br><span class="line">Note:</span><br><span class="line"></span><br><span class="line">A word is defined as a sequence of non-space characters.</span><br><span class="line">Input string may contain leading or trailing spaces. However, your reversed string should not contain leading or trailing spaces.</span><br><span class="line">You need to reduce multiple spaces between two words to a single space in the reversed string.</span><br></pre></td></tr></table></figure>
+
+
+<blockquote>
+<p>˼·<br><strong>**</strong>- ʱ�临�Ӷ�: O(N)<strong>**</strong>- �ռ临�Ӷ�: O(N)<strong>**</strong></p>
+</blockquote>
+<p>���űȱ������飬�����ո����Ϊ��һ�����ʣ�ע����ڱ߽��������жϣ��ڿ�һ���µ� string ����ոյĵ��ʣ����ֵ�� s���ܵ���˵���ѡ����ǻ�����һ��С����ģ�����֮��Ŀո�����Ƕ���ģ��ַ����Ŀ�ͷ��ĩβҲ�����ж���ո���Ҫд��ѭ������ո�</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">reverseWords</span><span class="params">(<span class="built_in">string</span> &amp;s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">0</span>,j = s.length();</span><br><span class="line">        <span class="keyword">while</span>(i &lt; j &amp;&amp; s[i] == <span class="string">' '</span>)</span><br><span class="line">            i++;</span><br><span class="line">        j--;</span><br><span class="line">        <span class="keyword">while</span>(j &gt;= i &amp;&amp; s[j] == <span class="string">' '</span>)</span><br><span class="line">            j--;</span><br><span class="line">        j++;</span><br><span class="line">        <span class="built_in">string</span> s1;</span><br><span class="line">        <span class="keyword">while</span>(j &gt;= i)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> temp = j - <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">while</span>(temp &gt;= <span class="number">0</span> &amp;&amp; s[temp] != <span class="string">' '</span>)</span><br><span class="line">                temp--;</span><br><span class="line">            <span class="keyword">int</span> t = temp;</span><br><span class="line">            temp++;</span><br><span class="line">            <span class="keyword">while</span>(j &gt; temp)</span><br><span class="line">                s1.push_back(s[temp++]);</span><br><span class="line">            j = t - <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">while</span>(j &gt;= i &amp;&amp; s[j] == <span class="string">' '</span>)</span><br><span class="line">                j--;</span><br><span class="line">            j++;</span><br><span class="line">            <span class="keyword">if</span>(j &gt;= i)</span><br><span class="line">                s1.push_back(<span class="string">' '</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        s = s1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/07/LeetCode_Cpp/0153._Find_Minimum_in_Rotated_Sorted_Array/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="鸭脖">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/header2.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鸭脖，麻辣的">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/04/07/LeetCode_Cpp/0153._Find_Minimum_in_Rotated_Sorted_Array/" itemprop="url">153. Find Minimum in Rotated Sorted Array</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-07T00:00:00+08:00">
+                2020-04-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="153-Find-Minimum-in-Rotated-Sorted-Array"><a href="#153-Find-Minimum-in-Rotated-Sorted-Array" class="headerlink" title="153. Find Minimum in Rotated Sorted Array"></a>153. Find Minimum in Rotated Sorted Array</h2><p>难度：Medium</p>
+<h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><p>题目链接：<a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/" target="_blank" rel="noopener">https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/</a></p>
+<p>Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.</p>
+<p>(i.e.,  <code>[0,1,2,4,5,6,7]</code> might become  <code>[4,5,6,7,0,1,2]</code>).</p>
+<p>Find the minimum element.</p>
+<p>You may assume no duplicate exists in the array.</p>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: [3,4,5,1,2] </span><br><span class="line">Output: 1</span><br></pre></td></tr></table></figure>
+
+<p><strong>Example 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: [4,5,6,7,0,1,2]</span><br><span class="line">Output: 0</span><br></pre></td></tr></table></figure>
+
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>最简单的方法，挨个遍历，如果当前值小于前一个值，那么输出当前值即可，时间复杂度为O(n)。<br>二分查找法，时间复杂度为O(log(n))。</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>快速简单的写了一个，提交，过了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int findMin(vector&lt;int&gt;&amp; nums) &#123;</span><br><span class="line">        int res_idx &#x3D; 0;</span><br><span class="line">        for (int i &#x3D; 1; i &lt; nums.size(); ++i)</span><br><span class="line">            if (nums[i] &lt; nums[i-1]) &#123;</span><br><span class="line">                res_idx &#x3D; i;</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">        return nums[res_idx];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>二分查找的简单实现</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int findMin(vector&lt;int&gt;&amp; nums) &#123;</span><br><span class="line">        int left &#x3D; 0, right &#x3D; nums.size() - 1;</span><br><span class="line">        while (nums[left] &gt; nums[right]) &#123;</span><br><span class="line">            int mid &#x3D; (right + left) &gt;&gt; 1;</span><br><span class="line">            if (nums[mid] &gt;&#x3D; nums[left])</span><br><span class="line">                left &#x3D; mid + 1;</span><br><span class="line">            else</span><br><span class="line">                right &#x3D; mid;</span><br><span class="line">        &#125;</span><br><span class="line">        return nums[left];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>用迭代器来实现</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int findMin(vector&lt;int&gt;&amp; nums) &#123;</span><br><span class="line">        auto begin &#x3D; nums.begin();</span><br><span class="line">        auto end &#x3D; std::prev(nums.end());</span><br><span class="line">        while (*begin &gt; *end) &#123;</span><br><span class="line">            auto gap &#x3D; (end - begin) &gt;&gt; 1;</span><br><span class="line">            *next(begin, gap) &gt;&#x3D; *begin ? advance(begin, gap + 1) : advance(end, -gap); </span><br><span class="line">        &#125;</span><br><span class="line">        return *begin;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>来源：<a href="https://github.com/xiaqunfeng/leetcode" target="_blank" rel="noopener">https://github.com/xiaqunfeng/leetcode</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/07/LeetCode_Cpp/0154._Find_Minimum_in_Rotated_Sorted_Array-II/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="鸭脖">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/header2.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鸭脖，麻辣的">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/04/07/LeetCode_Cpp/0154._Find_Minimum_in_Rotated_Sorted_Array-II/" itemprop="url">154. Find Minimum in Rotated Sorted Array II</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-07T00:00:00+08:00">
+                2020-04-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="154-Find-Minimum-in-Rotated-Sorted-Array-II"><a href="#154-Find-Minimum-in-Rotated-Sorted-Array-II" class="headerlink" title="154. Find Minimum in Rotated Sorted Array II"></a>154. Find Minimum in Rotated Sorted Array II</h2><p>难度：Hard</p>
+<h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><p>题目链接：<a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/description/" target="_blank" rel="noopener">https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/description/</a></p>
+<p>Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.</p>
+<p>(i.e.,  <code>[0,1,2,4,5,6,7]</code> might become  <code>[4,5,6,7,0,1,2]</code>).</p>
+<p>Find the minimum element.</p>
+<p>The array may contain duplicates.</p>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: [1,3,5]</span><br><span class="line">Output: 1</span><br></pre></td></tr></table></figure>
+
+<p><strong>Example 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: [2,2,2,0,1]</span><br><span class="line">Output: 0</span><br></pre></td></tr></table></figure>
+
+<p><strong>Note:</strong></p>
+<ul>
+<li>This is a follow up problem to <a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/" target="_blank" rel="noopener">Find Minimum in Rotated Sorted Array</a>.</li>
+<li>Would allow duplicates affect the run-time complexity? How and why?</li>
+</ul>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>这题竟然是hard，好尴尬。最简单时间复杂度为O(n)的方法，我把前一题的代码一行不动的挪过来，Accepted。<br>二分查找法，时间复杂度为O(log(n))。</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>O(n)，和前一题代码一样</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int findMin(vector&lt;int&gt;&amp; nums) &#123;</span><br><span class="line">        int res_idx &#x3D; 0;</span><br><span class="line">        for (int i &#x3D; 1; i &lt; nums.size(); ++i)</span><br><span class="line">            if (nums[i] &lt; nums[i-1]) &#123;</span><br><span class="line">                res_idx &#x3D; i;</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">        return nums[res_idx];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>二分法实现</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int findMin(vector&lt;int&gt;&amp; nums) &#123;</span><br><span class="line">        int left &#x3D; 0, right &#x3D; nums.size() - 1;</span><br><span class="line"></span><br><span class="line">        while (left &lt; right &amp;&amp; nums[left] &gt;&#x3D; nums[right]) &#123;</span><br><span class="line">            int mid &#x3D; left + (right - left) &#x2F; 2;</span><br><span class="line">            if (nums[mid] &#x3D;&#x3D; nums[left]) &#123;</span><br><span class="line">                ++left;</span><br><span class="line">            &#125; else if (nums[mid] &lt; nums[left]) &#123;</span><br><span class="line">                right &#x3D; mid;</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                left &#x3D; mid + 1;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        return nums[left];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>迭代器二分查找的实现</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int findMin(vector&lt;int&gt;&amp; nums) &#123;</span><br><span class="line">        auto left &#x3D; nums.begin();</span><br><span class="line">        auto right &#x3D; std::prev(nums.end());</span><br><span class="line">        while (*left &gt;&#x3D; *right &amp;&amp; left &lt; right) &#123;</span><br><span class="line">            auto gap &#x3D; (right - left) &gt;&gt; 1;</span><br><span class="line">            if (*next(left, gap) &#x3D;&#x3D; *left)</span><br><span class="line">                advance(left, 1);</span><br><span class="line">            else if (*next(left, gap) &lt; *left)</span><br><span class="line">                advance(right, -gap);</span><br><span class="line">            else</span><br><span class="line">                advance(left, gap + 1);</span><br><span class="line">        &#125;</span><br><span class="line">        return *left;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>来源：<a href="https://github.com/xiaqunfeng/leetcode" target="_blank" rel="noopener">https://github.com/xiaqunfeng/leetcode</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/07/LeetCode_Cpp/0164._Maximum_Gap/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="鸭脖">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/header2.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鸭脖，麻辣的">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/04/07/LeetCode_Cpp/0164._Maximum_Gap/" itemprop="url">164. Maximum Gap</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-07T00:00:00+08:00">
+                2020-04-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="164-Maximum-Gap"><a href="#164-Maximum-Gap" class="headerlink" title="164. Maximum Gap"></a>164. Maximum Gap</h1><p><strong><font color=red>�Ѷ�:Hard<font></strong></p>
+<h2 id="ˢ������"><a href="#ˢ������" class="headerlink" title="ˢ������"></a>ˢ������</h2><blockquote>
+<p>ԭ������</p>
+</blockquote>
+<ul>
+<li><a href="https://leetcode.com/problems/maximum-gap/" target="_blank" rel="noopener">https://leetcode.com/problems/maximum-gap/</a></li>
+</ul>
+<blockquote>
+<p>��������</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">Given an unsorted array, find the maximum difference between the successive elements in its sorted form.</span><br><span class="line"></span><br><span class="line">Return 0 if the array contains less than 2 elements.</span><br><span class="line"></span><br><span class="line">Example 1:</span><br><span class="line"></span><br><span class="line">Input: [3,6,9,1]</span><br><span class="line">Output: 3</span><br><span class="line">Explanation: The sorted form of the array is [1,3,6,9], either</span><br><span class="line">             (3,6) or (6,9) has the maximum difference 3.</span><br><span class="line">Example 2:</span><br><span class="line"></span><br><span class="line">Input: [10]</span><br><span class="line">Output: 0</span><br><span class="line">Explanation: The array contains less than 2 elements, therefore return 0.</span><br><span class="line">Note:</span><br><span class="line"></span><br><span class="line">You may assume all elements in the array are non-negative integers and fit in the 32-bit signed integer range.</span><br><span class="line">Try to solve it in linear time&#x2F;space.</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>˼·1<br><strong>**</strong>- ʱ�临�Ӷ�: O(NlgN)<strong>**</strong>- �ռ临�Ӷ�: O(1)<strong>**</strong></p>
+</blockquote>
+<p>����ͨ�ķ�����ȥ����ʵ���ѣ��ȶ�������������ٱ������飬���μ��� nums[i] - nums[i - 1] ������ֵ����</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">maximumGap</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(nums.size() &lt; <span class="number">2</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        sort(nums.begin(),nums.end());</span><br><span class="line">        <span class="keyword">int</span> ans = INT_MIN;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt; nums.size();++i)</span><br><span class="line">            ans = max(ans,nums[i] - nums[i - <span class="number">1</span>]);</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>˼·2<br><strong>**</strong>- ʱ�临�Ӷ�: O(N)<strong>**</strong>- �ռ临�Ӷ�: O(N)<strong>**</strong></p>
+</blockquote>
+<p>������Ŀ�е�note�Ѿ���ʾ�������Ե�ʱ��Ϳռ临�Ӷ���ɡ����������ڵ����ֵĴ�С������32bits���ڵģ���ô���ǿ�����Ͱ������߻������򣬾�����㷨�͸��Ӷȵ��Ƶ����Բο����㷨���ۡ����������ǲ����˻�������</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">maximumGap</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(nums.size() &lt; <span class="number">2</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> res[nums.size()];</span><br><span class="line">        <span class="keyword">int</span> t[nums.size()][<span class="number">10</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; nums.size();++i)</span><br><span class="line">        &#123;</span><br><span class="line">            res[i] = i;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>;j &lt; <span class="number">10</span>;++j)</span><br><span class="line">                t[i][j] = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">int</span> temp = nums[i],j = <span class="number">9</span>;</span><br><span class="line">            <span class="keyword">while</span>(temp)</span><br><span class="line">            &#123;</span><br><span class="line">                t[i][j--] = temp % <span class="number">10</span>;</span><br><span class="line">                temp /= <span class="number">10</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">9</span>;i &gt;= <span class="number">0</span>;--i)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> bucket[nums.size()],count1[<span class="number">10</span>];</span><br><span class="line">            <span class="built_in">memset</span>(count1,<span class="number">0</span>,<span class="keyword">sizeof</span>(count1));</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>;j &lt; nums.size();++j)</span><br><span class="line">                count1[t[res[j]][i]]++;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>;j &lt; <span class="number">10</span>;++j)</span><br><span class="line">                count1[j] += count1[j - <span class="number">1</span>];</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = nums.size() - <span class="number">1</span>;j &gt;= <span class="number">0</span>;--j)</span><br><span class="line">                bucket[--count1[t[res[j]][i]]] = res[j];</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>;j &lt; nums.size();++j)</span><br><span class="line">                res[j] = bucket[j];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> ans INT_MIN;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt; nums.size();++i)</span><br><span class="line">            ans = max(ans,nums[res[i]] - nums[res[i - <span class="number">1</span>]]);</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/07/LeetCode_Cpp/0160._intersection_of_two_linked_lists/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="鸭脖">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/header2.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鸭脖，麻辣的">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/04/07/LeetCode_Cpp/0160._intersection_of_two_linked_lists/" itemprop="url">160 intersection_of_Two_Linked_Lists</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-07T00:00:00+08:00">
+                2020-04-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="160-intersection-of-Two-Linked-Lists"><a href="#160-intersection-of-Two-Linked-Lists" class="headerlink" title="160 intersection_of_Two_Linked_Lists"></a>160 intersection_of_Two_Linked_Lists</h1><p> <strong><font color=red>难度: Easy</font></strong></p>
+<h2 id="刷题内容"><a href="#刷题内容" class="headerlink" title="刷题内容"></a>刷题内容</h2><blockquote>
+<p>原题连接</p>
+</blockquote>
+<ul>
+<li><a href="https://leetcode-cn.com/problems/intersection-of-two-linked-lists/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/intersection-of-two-linked-lists/</a><blockquote>
+<p>内容描述</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Write a program to find the node at which the intersection of two singly linked lists begins.</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="解题方案"><a href="#解题方案" class="headerlink" title="解题方案"></a>解题方案</h2><blockquote>
+<p>思路 1</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.  求长度差</span><br><span class="line">2.  长的链表先走掉长的部分</span><br><span class="line">3.  一起走，相遇即为交点</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">ListNode *<span class="title">getIntersectionNode</span><span class="params">(ListNode *headA, ListNode *headB)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> lena=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> lenb=<span class="number">0</span>;</span><br><span class="line">    ListNode *a = headA;</span><br><span class="line">    ListNode *b = headB;</span><br><span class="line">    <span class="keyword">while</span>(a)&#123;</span><br><span class="line">        lena++;</span><br><span class="line">        a=a-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(b)&#123;</span><br><span class="line">        lenb++;</span><br><span class="line">        b=b-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(a!=b)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">int</span> sub=<span class="built_in">abs</span>(lena-lenb);</span><br><span class="line">    <span class="keyword">if</span>(lena&gt;lenb)&#123;</span><br><span class="line">        <span class="keyword">while</span>(sub--)</span><br><span class="line">            headA=headA-&gt;next;</span><br><span class="line">    &#125;<span class="keyword">else</span></span><br><span class="line">        <span class="keyword">while</span>(sub--)</span><br><span class="line">            headB=headB-&gt;next;</span><br><span class="line">    <span class="keyword">while</span>(headA!=headB)&#123;</span><br><span class="line">        headA = headA-&gt;next;</span><br><span class="line">        headB = headB-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> headA;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/07/LeetCode_Cpp/0167._Two_Sum_II-Input_array_is_sorted/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="鸭脖">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/header2.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鸭脖，麻辣的">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/04/07/LeetCode_Cpp/0167._Two_Sum_II-Input_array_is_sorted/" itemprop="url">167. Two Sum II - Input array is sorted</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-07T00:00:00+08:00">
+                2020-04-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="167-Two-Sum-II-Input-array-is-sorted"><a href="#167-Two-Sum-II-Input-array-is-sorted" class="headerlink" title="167. Two Sum II - Input array is sorted"></a>167. Two Sum II - Input array is sorted</h2><p>难度：Easy</p>
+<h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><p>原题链接：<a href="https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/" target="_blank" rel="noopener">https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/</a></p>
+<p>Given an array of integers that is already <strong>sorted in ascending order</strong>, find two numbers such that they add up to a specific target number.</p>
+<p>The function twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2.</p>
+<p><strong>Note:</strong></p>
+<ul>
+<li>Your returned answers (both index1 and index2) are not zero-based.</li>
+<li>You may assume that each input would have <em>exactly</em> one solution and you may not use the <em>same</em> element twice.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: numbers &#x3D; [2,7,11,15], target &#x3D; 9</span><br><span class="line">Output: [1,2]</span><br><span class="line">Explanation: The sum of 2 and 7 is 9. Therefore index1 &#x3D; 1, index2 &#x3D; 2.</span><br></pre></td></tr></table></figure>
+
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>关键点：</p>
+<ul>
+<li>升序排列</li>
+<li>一定有解</li>
+</ul>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    vector&lt;int&gt; twoSum(vector&lt;int&gt;&amp; numbers, int target) &#123;</span><br><span class="line">        int left &#x3D; 0, right &#x3D; numbers.size() - 1;</span><br><span class="line">        while (left &lt; right) &#123;</span><br><span class="line">            int sum &#x3D; numbers[left] + numbers[right];</span><br><span class="line">            if (sum &lt; target) </span><br><span class="line">                left++;</span><br><span class="line">            else if (sum &gt; target) </span><br><span class="line">                right--;</span><br><span class="line">            else </span><br><span class="line">                return &#123;left + 1, right + 1&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">        return &#123;0, 0&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/07/LeetCode_Cpp/0199._Binary_Tree_Right_Side_View/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="鸭脖">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/header2.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鸭脖，麻辣的">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/04/07/LeetCode_Cpp/0199._Binary_Tree_Right_Side_View/" itemprop="url">199. Binary Tree Right Side View</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-07T00:00:00+08:00">
+                2020-04-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="199-Binary-Tree-Right-Side-View"><a href="#199-Binary-Tree-Right-Side-View" class="headerlink" title="199. Binary Tree Right Side View"></a>199. Binary Tree Right Side View</h1><p> <strong><font color=red>难度: Medium</font></strong></p>
+<h2 id="刷题内容"><a href="#刷题内容" class="headerlink" title="刷题内容"></a>刷题内容</h2><blockquote>
+<p>原题连接</p>
+</blockquote>
+<ul>
+<li><p><a href="https://leetcode-cn.com/problems/binary-tree-right-side-view/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/binary-tree-right-side-view/</a></p>
+<blockquote>
+<p>内容描述</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">给定一棵二叉树，想象自己站在它的右侧，按照从顶部到底部的顺序，返回从右侧所能看到的节点值。</span><br><span class="line"></span><br><span class="line">示例:</span><br><span class="line"></span><br><span class="line">输入: [1,2,3,null,5,null,4]</span><br><span class="line">输出: [1, 3, 4]</span><br><span class="line">解释:</span><br><span class="line"></span><br><span class="line">   1            &lt;---</span><br><span class="line"> &#x2F;   \</span><br><span class="line">2     3         &lt;---</span><br><span class="line"> \     \</span><br><span class="line">  5     4       &lt;---</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="解题方案"><a href="#解题方案" class="headerlink" title="解题方案"></a>解题方案</h2><blockquote>
+<p>思路 1</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">二叉树层次遍历</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">rightSideView</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; ans;</span><br><span class="line">    <span class="keyword">if</span>(root==<span class="literal">NULL</span>)</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    <span class="built_in">vector</span>&lt;TreeNode*&gt; <span class="built_in">stack</span>;</span><br><span class="line">    <span class="built_in">stack</span>.push_back(root);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span>(!<span class="built_in">stack</span>.empty())&#123;</span><br><span class="line">        <span class="built_in">vector</span>&lt;TreeNode*&gt; tmp;</span><br><span class="line">        TreeNode* node;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="built_in">stack</span>.size();i++)&#123;</span><br><span class="line">            node = <span class="built_in">stack</span>[i];</span><br><span class="line">            <span class="keyword">if</span>(node-&gt;left)</span><br><span class="line">                tmp.push_back(node-&gt;left);</span><br><span class="line">            <span class="keyword">if</span>(node-&gt;right)</span><br><span class="line">                tmp.push_back(node-&gt;right);</span><br><span class="line">        &#125;</span><br><span class="line">        ans.push_back(node-&gt;val);</span><br><span class="line">        <span class="built_in">stack</span> = tmp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/11/">&lt;i class&#x3D;&quot;fa fa-angle-left&quot;&gt;&lt;&#x2F;i&gt;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/13/">&lt;i class&#x3D;&quot;fa fa-angle-right&quot;&gt;&lt;&#x2F;i&gt;</a>
+  </nav>
+
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/header2.jpg"
+                alt="鸭脖" />
+            
+              <p class="site-author-name" itemprop="name">鸭脖</p>
+              <p class="site-description motion-element" itemprop="description">在沪的中原汉子</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">156</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">鸭脖</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count"></span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('-1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>
