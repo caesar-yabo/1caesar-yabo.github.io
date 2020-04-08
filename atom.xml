@@ -62,24 +62,22 @@
   
   <entry>
     <title>my-first-blog</title>
-    <link href="http://yoursite.com/2020/04/07/my-first-blog/"/>
-    <id>http://yoursite.com/2020/04/07/my-first-blog/</id>
+    <link href="http://yoursite.com/2020/04/07/blog_next_settings/"/>
+    <id>http://yoursite.com/2020/04/07/blog_next_settings/</id>
     <published>2020-04-07T07:49:52.000Z</published>
-    <updated>2020-04-07T09:25:17.659Z</updated>
+    <updated>2020-04-08T07:49:22.617Z</updated>
     
     <summary type="html">
     
-      附加一段文章摘要，字数最好在140字以内，会出现在meta的description里面
+      记录一些Blog和Next主题的设置。
     
     </summary>
     
     
-      <category term="默认分类" scheme="http://yoursite.com/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/"/>
+      <category term="软件安装设置" scheme="http://yoursite.com/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E8%AE%BE%E7%BD%AE/"/>
     
     
-      <category term="C++" scheme="http://yoursite.com/tags/C/"/>
-    
-      <category term="目标检测" scheme="http://yoursite.com/tags/%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B/"/>
+      <category term="next主题" scheme="http://yoursite.com/tags/next%E4%B8%BB%E9%A2%98/"/>
     
   </entry>
   
@@ -107,11 +105,11 @@
   </entry>
   
   <entry>
-    <title>4. Median of Two Sorted Arrays</title>
-    <link href="http://yoursite.com/2020/04/07/LeetCode_Cpp/0004.%20_Median_of_Two_Sorted_Arrays/"/>
-    <id>http://yoursite.com/2020/04/07/LeetCode_Cpp/0004.%20_Median_of_Two_Sorted_Arrays/</id>
+    <title>99. Recover Binary Search Tree</title>
+    <link href="http://yoursite.com/2020/04/07/LeetCode_Cpp/0099._Recover_Binary_Search_Tree/"/>
+    <id>http://yoursite.com/2020/04/07/LeetCode_Cpp/0099._Recover_Binary_Search_Tree/</id>
     <published>2020-04-06T16:00:00.000Z</published>
-    <updated>2020-04-08T06:54:27.641Z</updated>
+    <updated>2020-04-08T06:49:20.418Z</updated>
     
     <summary type="html">
     
@@ -119,7 +117,7 @@
       
         
         
-          &lt;h1 id=&quot;4-Median-of-Two-Sorted-Arrays&quot;&gt;&lt;a href=&quot;#4-Median-of-Two-Sorted-Arrays&quot; class=&quot;headerlink&quot; title=&quot;4. Median of Two Sorted
+          &lt;h1 id=&quot;99-Recover-Binary-Search-Tree&quot;&gt;&lt;a href=&quot;#99-Recover-Binary-Search-Tree&quot; class=&quot;headerlink&quot; title=&quot;99. Recover Binary Search
         
       
     
@@ -134,74 +132,6 @@
       <category term="C++" scheme="http://yoursite.com/tags/C/"/>
     
       <category term="LeetCode" scheme="http://yoursite.com/tags/LeetCode/"/>
-    
-      <category term="Hard" scheme="http://yoursite.com/tags/Hard/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>3. Longest Substring Without Repeating Characters</title>
-    <link href="http://yoursite.com/2020/04/07/LeetCode_Cpp/0003._Longest_Substring_Without_Repeating_Characters/"/>
-    <id>http://yoursite.com/2020/04/07/LeetCode_Cpp/0003._Longest_Substring_Without_Repeating_Characters/</id>
-    <published>2020-04-06T16:00:00.000Z</published>
-    <updated>2020-04-08T06:43:27.248Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;3-Longest-Substring-Without-Repeating-Characters&quot;&gt;&lt;a href=&quot;#3-Longest-Substring-Without-Repeating-Characters&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="C++" scheme="http://yoursite.com/categories/C/"/>
-    
-      <category term="LeetCode" scheme="http://yoursite.com/categories/C/LeetCode/"/>
-    
-    
-      <category term="C++" scheme="http://yoursite.com/tags/C/"/>
-    
-      <category term="LeetCode" scheme="http://yoursite.com/tags/LeetCode/"/>
-    
-      <category term="Medium" scheme="http://yoursite.com/tags/Medium/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>6. ZigZag Conversion</title>
-    <link href="http://yoursite.com/2020/04/07/LeetCode_Cpp/0006._ZigZag%20_Conversion/"/>
-    <id>http://yoursite.com/2020/04/07/LeetCode_Cpp/0006._ZigZag%20_Conversion/</id>
-    <published>2020-04-06T16:00:00.000Z</published>
-    <updated>2020-04-08T06:54:20.450Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;6-ZigZag-Conversion&quot;&gt;&lt;a href=&quot;#6-ZigZag-Conversion&quot; class=&quot;headerlink&quot; title=&quot;6. ZigZag Conversion&quot;&gt;&lt;/a&gt;6. ZigZag
-        
-      
-    
-    </summary>
-    
-    
-      <category term="C++" scheme="http://yoursite.com/categories/C/"/>
-    
-      <category term="LeetCode" scheme="http://yoursite.com/categories/C/LeetCode/"/>
-    
-    
-      <category term="C++" scheme="http://yoursite.com/tags/C/"/>
-    
-      <category term="LeetCode" scheme="http://yoursite.com/tags/LeetCode/"/>
-    
-      <category term="Medium" scheme="http://yoursite.com/tags/Medium/"/>
     
   </entry>
   
@@ -240,11 +170,11 @@
   </entry>
   
   <entry>
-    <title>5. Longest Palindromic Substring</title>
-    <link href="http://yoursite.com/2020/04/07/LeetCode_Cpp/0005._Longest_Palindromic_Substring/"/>
-    <id>http://yoursite.com/2020/04/07/LeetCode_Cpp/0005._Longest_Palindromic_Substring/</id>
+    <title>6. ZigZag Conversion</title>
+    <link href="http://yoursite.com/2020/04/07/LeetCode_Cpp/0006._ZigZag%20_Conversion/"/>
+    <id>http://yoursite.com/2020/04/07/LeetCode_Cpp/0006._ZigZag%20_Conversion/</id>
     <published>2020-04-06T16:00:00.000Z</published>
-    <updated>2020-04-08T06:54:23.906Z</updated>
+    <updated>2020-04-08T06:54:20.450Z</updated>
     
     <summary type="html">
     
@@ -252,7 +182,7 @@
       
         
         
-          &lt;h1 id=&quot;5-Longest-Palindromic-Substring&quot;&gt;&lt;a href=&quot;#5-Longest-Palindromic-Substring&quot; class=&quot;headerlink&quot; title=&quot;5. Longest Palindromic
+          &lt;h1 id=&quot;6-ZigZag-Conversion&quot;&gt;&lt;a href=&quot;#6-ZigZag-Conversion&quot; class=&quot;headerlink&quot; title=&quot;6. ZigZag Conversion&quot;&gt;&lt;/a&gt;6. ZigZag
         
       
     
@@ -304,6 +234,72 @@
   </entry>
   
   <entry>
+    <title>4. Median of Two Sorted Arrays</title>
+    <link href="http://yoursite.com/2020/04/07/LeetCode_Cpp/0004.%20_Median_of_Two_Sorted_Arrays/"/>
+    <id>http://yoursite.com/2020/04/07/LeetCode_Cpp/0004.%20_Median_of_Two_Sorted_Arrays/</id>
+    <published>2020-04-06T16:00:00.000Z</published>
+    <updated>2020-04-08T06:54:27.641Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;4-Median-of-Two-Sorted-Arrays&quot;&gt;&lt;a href=&quot;#4-Median-of-Two-Sorted-Arrays&quot; class=&quot;headerlink&quot; title=&quot;4. Median of Two Sorted
+        
+      
+    
+    </summary>
+    
+    
+      <category term="C++" scheme="http://yoursite.com/categories/C/"/>
+    
+      <category term="LeetCode" scheme="http://yoursite.com/categories/C/LeetCode/"/>
+    
+    
+      <category term="C++" scheme="http://yoursite.com/tags/C/"/>
+    
+      <category term="LeetCode" scheme="http://yoursite.com/tags/LeetCode/"/>
+    
+      <category term="Hard" scheme="http://yoursite.com/tags/Hard/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>5. Longest Palindromic Substring</title>
+    <link href="http://yoursite.com/2020/04/07/LeetCode_Cpp/0005._Longest_Palindromic_Substring/"/>
+    <id>http://yoursite.com/2020/04/07/LeetCode_Cpp/0005._Longest_Palindromic_Substring/</id>
+    <published>2020-04-06T16:00:00.000Z</published>
+    <updated>2020-04-08T06:54:23.906Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;5-Longest-Palindromic-Substring&quot;&gt;&lt;a href=&quot;#5-Longest-Palindromic-Substring&quot; class=&quot;headerlink&quot; title=&quot;5. Longest Palindromic
+        
+      
+    
+    </summary>
+    
+    
+      <category term="C++" scheme="http://yoursite.com/categories/C/"/>
+    
+      <category term="LeetCode" scheme="http://yoursite.com/categories/C/LeetCode/"/>
+    
+    
+      <category term="C++" scheme="http://yoursite.com/tags/C/"/>
+    
+      <category term="LeetCode" scheme="http://yoursite.com/tags/LeetCode/"/>
+    
+      <category term="Medium" scheme="http://yoursite.com/tags/Medium/"/>
+    
+  </entry>
+  
+  <entry>
     <title>8. String to Integer (atoi)</title>
     <link href="http://yoursite.com/2020/04/07/LeetCode_Cpp/0008._String_to_Integer_(atoi)/"/>
     <id>http://yoursite.com/2020/04/07/LeetCode_Cpp/0008._String_to_Integer_(atoi)/</id>
@@ -348,6 +344,40 @@
         
         
           &lt;h1 id=&quot;9-Palindrome-Number&quot;&gt;&lt;a href=&quot;#9-Palindrome-Number&quot; class=&quot;headerlink&quot; title=&quot;9. Palindrome Number&quot;&gt;&lt;/a&gt;9. Palindrome
+        
+      
+    
+    </summary>
+    
+    
+      <category term="C++" scheme="http://yoursite.com/categories/C/"/>
+    
+      <category term="LeetCode" scheme="http://yoursite.com/categories/C/LeetCode/"/>
+    
+    
+      <category term="C++" scheme="http://yoursite.com/tags/C/"/>
+    
+      <category term="LeetCode" scheme="http://yoursite.com/tags/LeetCode/"/>
+    
+      <category term="Medium" scheme="http://yoursite.com/tags/Medium/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>15. 3sum</title>
+    <link href="http://yoursite.com/2020/04/07/LeetCode_Cpp/0015._3sum/"/>
+    <id>http://yoursite.com/2020/04/07/LeetCode_Cpp/0015._3sum/</id>
+    <published>2020-04-06T16:00:00.000Z</published>
+    <updated>2020-04-08T06:53:53.752Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;15-3sum&quot;&gt;&lt;a href=&quot;#15-3sum&quot; class=&quot;headerlink&quot; title=&quot;15. 3sum&quot;&gt;&lt;/a&gt;15. 3sum&lt;/h1&gt;&lt;p&gt;难度:Medium&lt;/p&gt;
+&lt;h2 id=&quot;刷题内容&quot;&gt;&lt;a href=&quot;#刷题内容&quot;
         
       
     
@@ -478,40 +508,6 @@
         
         
           &lt;h2 id=&quot;16-3Sum-Closest&quot;&gt;&lt;a href=&quot;#16-3Sum-Closest&quot; class=&quot;headerlink&quot; title=&quot;16. 3Sum Closest&quot;&gt;&lt;/a&gt;16. 3Sum
-        
-      
-    
-    </summary>
-    
-    
-      <category term="C++" scheme="http://yoursite.com/categories/C/"/>
-    
-      <category term="LeetCode" scheme="http://yoursite.com/categories/C/LeetCode/"/>
-    
-    
-      <category term="C++" scheme="http://yoursite.com/tags/C/"/>
-    
-      <category term="LeetCode" scheme="http://yoursite.com/tags/LeetCode/"/>
-    
-      <category term="Medium" scheme="http://yoursite.com/tags/Medium/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>15. 3sum</title>
-    <link href="http://yoursite.com/2020/04/07/LeetCode_Cpp/0015._3sum/"/>
-    <id>http://yoursite.com/2020/04/07/LeetCode_Cpp/0015._3sum/</id>
-    <published>2020-04-06T16:00:00.000Z</published>
-    <updated>2020-04-08T06:53:53.752Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;15-3sum&quot;&gt;&lt;a href=&quot;#15-3sum&quot; class=&quot;headerlink&quot; title=&quot;15. 3sum&quot;&gt;&lt;/a&gt;15. 3sum&lt;/h1&gt;&lt;p&gt;难度:Medium&lt;/p&gt;
-&lt;h2 id=&quot;刷题内容&quot;&gt;&lt;a href=&quot;#刷题内容&quot;
         
       
     
