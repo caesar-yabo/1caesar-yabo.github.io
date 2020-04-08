@@ -81,14 +81,14 @@
 
 
 
-<meta name="description" content="141. linked list cycle�Ѷ�:Easy ˢ������ ԭ������  *https:&#x2F;&#x2F;leetcode.com&#x2F;problems&#x2F;linked-list-cycle&#x2F;   ��������    1234Given a linked list, determine if it has a cycle in it.Follow up:Can you solve it wi">
+<meta name="description" content="141. linked list cycle难度:Easy 刷题内容 原题连接  *https:&#x2F;&#x2F;leetcode.com&#x2F;problems&#x2F;linked-list-cycle&#x2F;   内容描述    1234Given a linked list, determine if it has a cycle in it.Follow up:Can you solve it without using">
 <meta property="og:type" content="article">
 <meta property="og:title" content="141. linked list cycle">
 <meta property="og:url" content="http://yoursite.com/2020/04/07/LeetCode_Cpp/0141._linked_list_cycle/index.html">
 <meta property="og:site_name" content="鸭脖，麻辣的">
-<meta property="og:description" content="141. linked list cycle�Ѷ�:Easy ˢ������ ԭ������  *https:&#x2F;&#x2F;leetcode.com&#x2F;problems&#x2F;linked-list-cycle&#x2F;   ��������    1234Given a linked list, determine if it has a cycle in it.Follow up:Can you solve it wi">
+<meta property="og:description" content="141. linked list cycle难度:Easy 刷题内容 原题连接  *https:&#x2F;&#x2F;leetcode.com&#x2F;problems&#x2F;linked-list-cycle&#x2F;   内容描述    1234Given a linked list, determine if it has a cycle in it.Follow up:Can you solve it without using">
 <meta property="article:published_time" content="2020-04-06T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-04-08T01:56:54.715Z">
+<meta property="article:modified_time" content="2020-04-08T02:53:00.041Z">
 <meta property="article:author" content="鸭脖">
 <meta property="article:tag" content="C++">
 <meta property="article:tag" content="LeetCode">
@@ -410,23 +410,23 @@
       
 
       
-        <h1 id="141-linked-list-cycle"><a href="#141-linked-list-cycle" class="headerlink" title="141. linked list cycle"></a>141. linked list cycle</h1><p>�Ѷ�:Easy</p>
-<h2 id="ˢ������"><a href="#ˢ������" class="headerlink" title="ˢ������"></a>ˢ������</h2><blockquote>
-<p>ԭ������</p>
+        <h1 id="141-linked-list-cycle"><a href="#141-linked-list-cycle" class="headerlink" title="141. linked list cycle"></a>141. linked list cycle</h1><p>难度:Easy</p>
+<h2 id="刷题内容"><a href="#刷题内容" class="headerlink" title="刷题内容"></a>刷题内容</h2><blockquote>
+<p>原题连接</p>
 </blockquote>
 <p>*<a href="https://leetcode.com/problems/linked-list-cycle/" target="_blank" rel="noopener">https://leetcode.com/problems/linked-list-cycle/</a></p>
 <ul>
 <li><blockquote>
-<p>��������</p>
+<p>内容描述</p>
 </blockquote>
 </li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Given a linked list, determine if it has a cycle in it.</span><br><span class="line"></span><br><span class="line">Follow up:</span><br><span class="line">Can you solve it without using extra space?</span><br></pre></td></tr></table></figure>
 
-<h2 id="���ⷽ��"><a href="#���ⷽ��" class="headerlink" title="���ⷽ��"></a>���ⷽ��</h2><blockquote>
-<p>˼·<br><strong>**</strong>- ʱ�临�Ӷ�: O(N)<strong>**</strong>- �ռ临�Ӷ�: O(1)<strong>**</strong></p>
+<h2 id="解题方案"><a href="#解题方案" class="headerlink" title="解题方案"></a>解题方案</h2><blockquote>
+<p>思路<br><strong>**</strong>- 时间复杂度: O(N)<strong>**</strong>- 空间复杂度: O(1)<strong>**</strong></p>
 </blockquote>
-<p>������͵Ŀ���ָ���������е����ã���������ָ�룬ÿ��ѭ����һ����1����һ����2������ָ�����������л���</p>
+<p>这题典型的快慢指针在链表中的运用，定义两个指针，每次循环，一个加1，另一个加2，若两指针相遇，则有环。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(NULL) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">hasCycle</span><span class="params">(ListNode *head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(head == <span class="literal">nullptr</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        ListNode* l1 = head,*l2 = head -&gt;next;</span><br><span class="line">        <span class="keyword">while</span>(<span class="literal">true</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(l2 == <span class="literal">nullptr</span> || l2 -&gt;next == <span class="literal">nullptr</span>)</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            <span class="keyword">if</span>(l1 == l2)</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            l1 = l1 -&gt;next;</span><br><span class="line">            l2 = l2 -&gt;next -&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
       
     </div>
@@ -461,8 +461,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/04/07/LeetCode_Cpp/0137._single_number_II/" rel="next" title="137.Single Number II">
-                <i class="fa fa-chevron-left"></i> 137.Single Number II
+              <a href="/2020/04/07/LeetCode_Cpp/0145._Binary_Tree_Postorder_Traversal/" rel="next" title="145. Binary Tree Postorder Traversal">
+                <i class="fa fa-chevron-left"></i> 145. Binary Tree Postorder Traversal
               </a>
             
           </div>
@@ -471,8 +471,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/04/07/LeetCode_Cpp/0142._linked_list_cycle%20II/" rel="prev" title="142. linked list cycle II">
-                142. linked list cycle II <i class="fa fa-chevron-right"></i>
+              <a href="/2020/04/07/LeetCode_Cpp/0144._Binary_Tree_Preorder_Traversal/" rel="prev" title="144. Binary Tree Preorder Traversal">
+                144. Binary Tree Preorder Traversal <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -616,7 +616,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#141-linked-list-cycle"><span class="nav-number">1.</span> <span class="nav-text">141. linked list cycle</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ˢ������"><span class="nav-number">1.1.</span> <span class="nav-text">ˢ������</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#���ⷽ��"><span class="nav-number">1.2.</span> <span class="nav-text">���ⷽ��</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#141-linked-list-cycle"><span class="nav-number">1.</span> <span class="nav-text">141. linked list cycle</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#刷题内容"><span class="nav-number">1.1.</span> <span class="nav-text">刷题内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解题方案"><span class="nav-number">1.2.</span> <span class="nav-text">解题方案</span></a></li></ol></li></ol></div>
             
 
           </div>

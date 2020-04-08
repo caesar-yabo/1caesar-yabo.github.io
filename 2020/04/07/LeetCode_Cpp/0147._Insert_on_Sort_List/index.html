@@ -81,14 +81,14 @@
 
 
 
-<meta name="description" content="147. Insertion Sort List�Ѷ�:Medium ˢ������ ԭ������   https:&#x2F;&#x2F;leetcode.com&#x2F;problems&#x2F;insertion-sort-list&#x2F;   ��������  123456789101112131415161718192021Sort a linked list using insertion sort.A graphical">
+<meta name="description" content="147. Insertion Sort List难度:Medium 刷题内容 原题连接   https:&#x2F;&#x2F;leetcode.com&#x2F;problems&#x2F;insertion-sort-list&#x2F;   内容描述  123456789101112131415161718192021Sort a linked list using insertion sort.A graphical example of">
 <meta property="og:type" content="article">
 <meta property="og:title" content="147. Insertion Sort List">
 <meta property="og:url" content="http://yoursite.com/2020/04/07/LeetCode_Cpp/0147._Insert_on_Sort_List/index.html">
 <meta property="og:site_name" content="鸭脖，麻辣的">
-<meta property="og:description" content="147. Insertion Sort List�Ѷ�:Medium ˢ������ ԭ������   https:&#x2F;&#x2F;leetcode.com&#x2F;problems&#x2F;insertion-sort-list&#x2F;   ��������  123456789101112131415161718192021Sort a linked list using insertion sort.A graphical">
+<meta property="og:description" content="147. Insertion Sort List难度:Medium 刷题内容 原题连接   https:&#x2F;&#x2F;leetcode.com&#x2F;problems&#x2F;insertion-sort-list&#x2F;   内容描述  123456789101112131415161718192021Sort a linked list using insertion sort.A graphical example of">
 <meta property="article:published_time" content="2020-04-06T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-04-08T01:55:23.916Z">
+<meta property="article:modified_time" content="2020-04-08T02:53:20.827Z">
 <meta property="article:author" content="鸭脖">
 <meta property="article:tag" content="C++">
 <meta property="article:tag" content="LeetCode">
@@ -410,22 +410,22 @@
       
 
       
-        <h1 id="147-Insertion-Sort-List"><a href="#147-Insertion-Sort-List" class="headerlink" title="147. Insertion Sort List"></a>147. Insertion Sort List</h1><p>�Ѷ�:Medium</p>
-<h2 id="ˢ������"><a href="#ˢ������" class="headerlink" title="ˢ������"></a>ˢ������</h2><blockquote>
-<p>ԭ������</p>
+        <h1 id="147-Insertion-Sort-List"><a href="#147-Insertion-Sort-List" class="headerlink" title="147. Insertion Sort List"></a>147. Insertion Sort List</h1><p>难度:Medium</p>
+<h2 id="刷题内容"><a href="#刷题内容" class="headerlink" title="刷题内容"></a>刷题内容</h2><blockquote>
+<p>原题连接</p>
 </blockquote>
 <ul>
 <li><a href="https://leetcode.com/problems/insertion-sort-list/" target="_blank" rel="noopener">https://leetcode.com/problems/insertion-sort-list/</a></li>
 </ul>
 <blockquote>
-<p>��������</p>
+<p>内容描述</p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">Sort a linked list using insertion sort.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">A graphical example of insertion sort. The partial sorted list (black) initially contains only the first element in the list.</span><br><span class="line">With each iteration one element (red) is removed from the input data and inserted in-place into the sorted list</span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">Algorithm of Insertion Sort:</span><br><span class="line"></span><br><span class="line">Insertion sort iterates, consuming one input element each repetition, and growing a sorted output list.</span><br><span class="line">At each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there.</span><br><span class="line">It repeats until no input elements remain.</span><br><span class="line"></span><br><span class="line">Example 1:</span><br><span class="line"></span><br><span class="line">Input: 4-&gt;2-&gt;1-&gt;3</span><br><span class="line">Output: 1-&gt;2-&gt;3-&gt;4</span><br><span class="line">Example 2:</span><br><span class="line"></span><br><span class="line">Input: -1-&gt;5-&gt;3-&gt;4-&gt;0</span><br><span class="line">Output: -1-&gt;0-&gt;3-&gt;4-&gt;5</span><br></pre></td></tr></table></figure>
 
-<h2 id="�������"><a href="#�������" class="headerlink" title="�������"></a>�������</h2><blockquote>
-<p>˼·<br><strong>**</strong>- ʱ�临�Ӷ�: O(N^2)<strong>**</strong>- �ռ临�Ӷ�: O(1)<strong>**</strong></p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><blockquote>
+<p>思路<br><strong>**</strong>- 时间复杂度: O(N^2)<strong>**</strong>- 空间复杂度: O(1)<strong>**</strong></p>
 </blockquote>
-<p>���������в������򡣺���ͨ�Ĳ�������һ��������Ҫע����Ҫ�������Ĳ�������Ϥ����ĳ��ֵ�������е�λ��ʱ��Ҫ������ڵ���뵽���ʵ�λ�ã�ִ�����������Ĳ����ɾ��������</p>
+<p>对链表进行插入排序。和普通的插入排序一样，不过要注意需要对链表的操作很熟悉。当某个值在链表中的位置时需要将这个节点插入到合适的位置，执行依次链表的插入和删除操作。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(NULL) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">insertionSortList</span><span class="params">(ListNode* head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!head)</span><br><span class="line">            <span class="keyword">return</span> head;</span><br><span class="line">            ListNode* current = head -&gt;next;</span><br><span class="line">        ListNode* pre = head;</span><br><span class="line">        <span class="keyword">while</span>(current)</span><br><span class="line">        &#123;</span><br><span class="line">            ListNode* temp2 = head;</span><br><span class="line">            ListNode* temp1 = head;</span><br><span class="line">            <span class="keyword">while</span>(temp2 -&gt;val &lt; current -&gt;val)</span><br><span class="line">            &#123;</span><br><span class="line">                temp1 = temp2;</span><br><span class="line">                temp2 = temp2 -&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(temp1 != temp2)</span><br><span class="line">                temp1 -&gt;next = current;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                head = current;</span><br><span class="line">            <span class="keyword">if</span>(temp2 != current)</span><br><span class="line">            &#123;</span><br><span class="line">                pre -&gt;next = current -&gt;next;</span><br><span class="line">                current -&gt;next = temp2;</span><br><span class="line">                current = pre -&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                pre = current;</span><br><span class="line">                current = current -&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
       
     </div>
@@ -460,8 +460,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/04/07/LeetCode_Cpp/0153._Find_Minimum_in_Rotated_Sorted_Array/" rel="next" title="153. Find Minimum in Rotated Sorted Array">
-                <i class="fa fa-chevron-left"></i> 153. Find Minimum in Rotated Sorted Array
+              <a href="/2020/04/07/LeetCode_Cpp/0144._Binary_Tree_Preorder_Traversal/" rel="next" title="144. Binary Tree Preorder Traversal">
+                <i class="fa fa-chevron-left"></i> 144. Binary Tree Preorder Traversal
               </a>
             
           </div>
@@ -470,8 +470,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/04/07/LeetCode_Cpp/0148._Sort%20_list/" rel="prev" title="148.Sort list">
-                148.Sort list <i class="fa fa-chevron-right"></i>
+              <a href="/2020/04/07/LeetCode_Cpp/0142._linked_list_cycle%20II/" rel="prev" title="142. linked list cycle II">
+                142. linked list cycle II <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -615,7 +615,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#147-Insertion-Sort-List"><span class="nav-number">1.</span> <span class="nav-text">147. Insertion Sort List</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ˢ������"><span class="nav-number">1.1.</span> <span class="nav-text">ˢ������</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#�������"><span class="nav-number">1.2.</span> <span class="nav-text">�������</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#147-Insertion-Sort-List"><span class="nav-number">1.</span> <span class="nav-text">147. Insertion Sort List</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#刷题内容"><span class="nav-number">1.1.</span> <span class="nav-text">刷题内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决方案"><span class="nav-number">1.2.</span> <span class="nav-text">解决方案</span></a></li></ol></li></ol></div>
             
 
           </div>

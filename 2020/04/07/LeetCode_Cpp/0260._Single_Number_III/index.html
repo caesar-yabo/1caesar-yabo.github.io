@@ -81,14 +81,14 @@
 
 
 
-<meta name="description" content="260. Single Number III�Ѷ�:Medium ˢ������ ԭ������   https:&#x2F;&#x2F;leetcode.com&#x2F;problems&#x2F;single-number-iii&#x2F;   ��������  12345678910Given an array of numbers nums, in which exactly two elements appear only onc">
+<meta name="description" content="260. Single Number III难度:Medium 刷题内容 原题连接   https:&#x2F;&#x2F;leetcode.com&#x2F;problems&#x2F;single-number-iii&#x2F;   内容描述  12345678910Given an array of numbers nums, in which exactly two elements appear only once and all t">
 <meta property="og:type" content="article">
 <meta property="og:title" content="260. Single Number III">
 <meta property="og:url" content="http://yoursite.com/2020/04/07/LeetCode_Cpp/0260._Single_Number_III/index.html">
 <meta property="og:site_name" content="鸭脖，麻辣的">
-<meta property="og:description" content="260. Single Number III�Ѷ�:Medium ˢ������ ԭ������   https:&#x2F;&#x2F;leetcode.com&#x2F;problems&#x2F;single-number-iii&#x2F;   ��������  12345678910Given an array of numbers nums, in which exactly two elements appear only onc">
+<meta property="og:description" content="260. Single Number III难度:Medium 刷题内容 原题连接   https:&#x2F;&#x2F;leetcode.com&#x2F;problems&#x2F;single-number-iii&#x2F;   内容描述  12345678910Given an array of numbers nums, in which exactly two elements appear only once and all t">
 <meta property="article:published_time" content="2020-04-06T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-04-08T02:06:24.509Z">
+<meta property="article:modified_time" content="2020-04-08T02:55:33.015Z">
 <meta property="article:author" content="鸭脖">
 <meta property="article:tag" content="C++">
 <meta property="article:tag" content="LeetCode">
@@ -410,21 +410,21 @@
       
 
       
-        <h1 id="260-Single-Number-III"><a href="#260-Single-Number-III" class="headerlink" title="260. Single Number III"></a>260. Single Number III</h1><p>�Ѷ�:Medium</p>
-<h2 id="ˢ������"><a href="#ˢ������" class="headerlink" title="ˢ������"></a>ˢ������</h2><blockquote>
-<p>ԭ������</p>
+        <h1 id="260-Single-Number-III"><a href="#260-Single-Number-III" class="headerlink" title="260. Single Number III"></a>260. Single Number III</h1><p>难度:Medium</p>
+<h2 id="刷题内容"><a href="#刷题内容" class="headerlink" title="刷题内容"></a>刷题内容</h2><blockquote>
+<p>原题连接</p>
 </blockquote>
 <ul>
 <li><a href="https://leetcode.com/problems/single-number-iii/" target="_blank" rel="noopener">https://leetcode.com/problems/single-number-iii/</a></li>
 </ul>
 <blockquote>
-<p>��������</p>
+<p>内容描述</p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Given an array of numbers nums, in which exactly two elements appear only once and all the other elements appear exactly twice. Find the two elements that appear only once.</span><br><span class="line"></span><br><span class="line">Example:</span><br><span class="line"></span><br><span class="line">Input:  [1,2,1,3,2,5]</span><br><span class="line">Output: [3,5]</span><br><span class="line">Note:</span><br><span class="line"></span><br><span class="line">The order of the result is not important. So in the above example, [5, 3] is also correct.</span><br><span class="line">Your algorithm should run in linear runtime complexity. Could you implement it using only constant space complexity?</span><br></pre></td></tr></table></figure>
-<h2 id="�������"><a href="#�������" class="headerlink" title="�������"></a>�������</h2><blockquote>
-<p>˼·1<br><strong>**</strong>- ʱ�临�Ӷ�: O(n)<strong>**</strong>- �ռ临�Ӷ�: O(1)<strong>**</strong></p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><blockquote>
+<p>思路1<br><strong>**</strong>- 时间复杂度: O(n)<strong>**</strong>- 空间复杂度: O(1)<strong>**</strong></p>
 </blockquote>
-<p>������֮ǰ���������в�ͬ����������� single number����֮ǰ��˼άȥ���Ļ����ڶ�������������������֮��õ���Ӧ�������� single number ���ֵaXorb����������aXorbת���ɶ����ƣ��ӵ�0λ���𣬵�һ��Ϊ1��λ����˵�������λ��a �� b����ȣ��������е����ֳ������֣��������λ��Ϊ0��һ���֣�Ϊ1��һ���֣������Ͱ��������ֵ��˲�ͬ���������С����ŷֱ���������������ܵõ����</p>
+<p>这题与之前的那题略有不同，这次有两个 single number，用之前的思维去做的话，在对数组进行依次异或运算之后得到的应该是两个 single number 异或值aXorb，接下来将aXorb转换成二进制，从第0位找起，第一个为1的位，则说明在这个位上a 和 b不相等，把数组中的数分成两部分，即在这个位上为0的一部分，为1的一部分，这样就把两个数分到了不同的两部分中。接着分别对这两部分异或就能得到结果</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">singleNumber</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> aXorB = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> num : nums) &#123;</span><br><span class="line">            aXorB ^= num;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> differingBit = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> ((differingBit &amp; aXorB) == <span class="number">0</span>) &#123;</span><br><span class="line">            differingBit &lt;&lt;= <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> a = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> b = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> num : nums) &#123;</span><br><span class="line">            <span class="keyword">if</span> ((num &amp; differingBit) == <span class="number">0</span>) &#123;</span><br><span class="line">                a ^= num;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                b ^= num;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> &#123;a, b&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
       
     </div>
@@ -459,8 +459,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/04/07/LeetCode_Cpp/0326._power_of_three/" rel="next" title="326. Power_of_Three">
-                <i class="fa fa-chevron-left"></i> 326. Power_of_Three
+              <a href="/2020/04/07/LeetCode_Cpp/0216._Combination_Sum_III/" rel="next" title="216. Combination Sum III">
+                <i class="fa fa-chevron-left"></i> 216. Combination Sum III
               </a>
             
           </div>
@@ -469,8 +469,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/04/07/LeetCode_Cpp/0216._Combination_Sum_III/" rel="prev" title="216. Combination Sum III">
-                216. Combination Sum III <i class="fa fa-chevron-right"></i>
+              <a href="/2020/04/07/LeetCode_Cpp/0154._Find_Minimum_in_Rotated_Sorted_Array-II/" rel="prev" title="154. Find Minimum in Rotated Sorted Array II">
+                154. Find Minimum in Rotated Sorted Array II <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -614,7 +614,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#260-Single-Number-III"><span class="nav-number">1.</span> <span class="nav-text">260. Single Number III</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ˢ������"><span class="nav-number">1.1.</span> <span class="nav-text">ˢ������</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#�������"><span class="nav-number">1.2.</span> <span class="nav-text">�������</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#260-Single-Number-III"><span class="nav-number">1.</span> <span class="nav-text">260. Single Number III</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#刷题内容"><span class="nav-number">1.1.</span> <span class="nav-text">刷题内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决方案"><span class="nav-number">1.2.</span> <span class="nav-text">解决方案</span></a></li></ol></li></ol></div>
             
 
           </div>
