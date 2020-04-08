@@ -81,13 +81,13 @@
 
 
 
-<meta name="description" content="在沪的中原汉子">
+<meta name="description" content="yaboyuanyabo@163.com">
 <meta property="og:type" content="website">
 <meta property="og:title" content="鸭脖，麻辣的">
 <meta property="og:url" content="http://yoursite.com/page/16/index.html">
 <meta property="og:site_name" content="鸭脖，麻辣的">
-<meta property="og:description" content="在沪的中原汉子">
-<meta property="article:author" content="鸭脖">
+<meta property="og:description" content="yaboyuanyabo@163.com">
+<meta property="article:author" content="在沪的中原汉子">
 <meta property="article:tag" content="计算机视觉、C++、终端芯片">
 <meta name="twitter:card" content="summary">
 
@@ -288,10 +288,10 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/07/LeetCode_Cpp/0947._Most_Stones_Removed_with_Same_Row_or_Column/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/07/LeetCode_Cpp/0948._Bag_of_Tokens/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="鸭脖">
+      <meta itemprop="name" content="在沪的中原汉子">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/header2.jpg">
     </span>
@@ -307,7 +307,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/04/07/LeetCode_Cpp/0947._Most_Stones_Removed_with_Same_Row_or_Column/" itemprop="url">947. Most Stones Removed with Same Row or Column</a></h1>
+                <a class="post-title-link" href="/2020/04/07/LeetCode_Cpp/0948._Bag_of_Tokens/" itemprop="url">948. Bag of Tokens</a></h1>
         
 
         <div class="post-meta">
@@ -344,6 +344,17 @@
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/C/" itemprop="url" rel="index">
                     <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
                   </a>
                 </span>
 
@@ -412,22 +423,28 @@
       
         
           
-            <h1 id="947-Most-Stones-Removed-with-Same-Row-or-Column"><a href="#947-Most-Stones-Removed-with-Same-Row-or-Column" class="headerlink" title="947. Most Stones Removed with Same Row or Column"></a>947. Most Stones Removed with Same Row or Column</h1><p>难度:Medium</p>
-<h2 id="刷题内容"><a href="#刷题内容" class="headerlink" title="刷题内容"></a>刷题内容</h2><p>题目:<br><a href="https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/" target="_blank" rel="noopener">https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/</a></p>
+            <h1 id="948-Bag-of-Tokens"><a href="#948-Bag-of-Tokens" class="headerlink" title="948. Bag of Tokens"></a>948. Bag of Tokens</h1><p>难度:Medium</p>
+<h2 id="刷题内容"><a href="#刷题内容" class="headerlink" title="刷题内容"></a>刷题内容</h2><p>题目:<br><a href="https://leetcode.com/problems/bag-of-tokens/" target="_blank" rel="noopener">https://leetcode.com/problems/bag-of-tokens/</a></p>
 <p>题意：</p>
 <ol>
-<li>给平面上n个点</li>
-<li>每次操作都可以挑选其中x坐标相等或者y坐标相等的两个点，划掉一个</li>
-<li>求最多能划掉多少个</li>
+<li>玩个游戏，有n个游戏币，游戏币有权值，初始能量为P</li>
+<li>每个游戏币只能被选择一次，每次只能在两种操作中选择其中一个操作<ol>
+<li>如果当前能量大于或等于该游戏币的权值，那么可以将能量减掉该游戏币的权值，分数+1</li>
+<li>如果当前分数大于或等于1，那么可以将分数-1，将能量加上该游戏币的权值</li>
+</ol>
+</li>
+<li>问最多能得到多少分</li>
 </ol>
 <h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>思路：</p>
 <ul>
-<li>我们平面上的点想象成图论上的一个几点，如果两个点之间，x坐标相等或者y坐标相等，那么连边</li>
-<li>题目就可以转为，求这个图的联通分量，因为只要两个团不联通，是无论如何无法进行操作的，所以剩下的个数必是联通分量的个数</li>
-<li>剩下就是dfs即可</li>
+<li>假设只有第一种操作，那么这个题就是个贪心题，排序，从小到大选择游戏币，直到能量用完</li>
+<li>第二种操作，相当于找一个权重小于或等于P的游戏币（命名为游戏币B），跟另一个游戏币（命名为游戏币A）同时去掉，然后能量加上游戏币A的能量</li>
+<li>游戏币A很容易想，肯定选择权重最大的那个，那游戏币B要挑哪个呢？</li>
+<li>答案是任意挑，因为对结果无影响。大家可以想一想，贪心算法相当于要求A[0]+A[1]+…A[k]&lt;=P，k的最大，假设我们挑中了游戏币B来对冲游戏币A，那么下一轮的贪心问题就是A[0]+A[1]+…+A[k]-values(B)&lt;=P+(values(A)-values(B))，可以看出，values(B)是被消去的</li>
+<li>所以解法就是，枚举所有的操作，每次操作把最小的置换最大的，剩下的就是求解贪心问题A[0]+A[1]+…A[k]&lt;=P</li>
 </ul>
 <p>解法：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">bool</span> flag[<span class="number">1010</span>];</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt;&amp; stones, <span class="keyword">int</span> idx)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; stones.<span class="built_in">size</span>();i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (flag[i]) &#123;</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (stones[idx][<span class="number">0</span>] != stones[i][<span class="number">0</span>] &amp;&amp; stones[idx][<span class="number">1</span>] != stones[i][<span class="number">1</span>]) &#123;</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            flag[i] = <span class="literal">true</span>;</span><br><span class="line">            dfs(stones, i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">removeStones</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt;&amp; stones)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">memset</span>(flag, <span class="literal">false</span>, <span class="keyword">sizeof</span>(flag));</span><br><span class="line">        <span class="keyword">int</span> ret = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; stones.<span class="built_in">size</span>();i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (!flag[i]) &#123;</span><br><span class="line">                ret++;</span><br><span class="line">                dfs(stones, i);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> stones.<span class="built_in">size</span>() - ret;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">int</span> sum[<span class="number">10010</span>];</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">getSum</span><span class="params">(<span class="keyword">int</span> idx)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (idx &lt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> sum[idx];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">bagOfTokensScore</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; tokens, <span class="keyword">int</span> P)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (tokens.<span class="built_in">size</span>() == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        sort(tokens.<span class="built_in">begin</span>(), tokens.<span class="built_in">end</span>());</span><br><span class="line">        sum[<span class="number">0</span>] = tokens[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>;i &lt; tokens.<span class="built_in">size</span>();i++) &#123;</span><br><span class="line">            sum[i] = sum[i - <span class="number">1</span>] + tokens[i];</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> left = <span class="number">0</span>, right = tokens.<span class="built_in">size</span>() - <span class="number">1</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> ret = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (left &lt;= right) &#123;</span><br><span class="line">            <span class="keyword">while</span> (res &lt;= right &amp;&amp; getSum(res) - getSum(left - <span class="number">1</span>) &lt;= P) &#123;</span><br><span class="line">                res++;</span><br><span class="line">            &#125;</span><br><span class="line">            ret = ret &gt; res - left ? ret : res - left;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> (left == right) &#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (P &gt;= tokens[left]) &#123;</span><br><span class="line">                P += tokens[right--] - tokens[left++];</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 
           
@@ -477,10 +494,10 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/07/LeetCode_Cpp/0003._Longest_Substring_Without_Repeating_Characters/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/07/LeetCode_Cpp/0949._Largest_Time_for_Given_Digits/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="鸭脖">
+      <meta itemprop="name" content="在沪的中原汉子">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/header2.jpg">
     </span>
@@ -496,7 +513,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/04/07/LeetCode_Cpp/0003._Longest_Substring_Without_Repeating_Characters/" itemprop="url">3. Longest Substring Without Repeating Characters</a></h1>
+                <a class="post-title-link" href="/2020/04/07/LeetCode_Cpp/0949._Largest_Time_for_Given_Digits/" itemprop="url">949. Largest Time for Given Digits</a></h1>
         
 
         <div class="post-meta">
@@ -533,6 +550,17 @@
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/C/" itemprop="url" rel="index">
                     <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
                   </a>
                 </span>
 
@@ -601,29 +629,22 @@
       
         
           
-            <h1 id="3-Longest-Substring-Without-Repeating-Characters"><a href="#3-Longest-Substring-Without-Repeating-Characters" class="headerlink" title="3. Longest Substring Without Repeating Characters"></a>3. Longest Substring Without Repeating Characters</h1><p>难度:Medium</p>
-<h2 id="刷题内容"><a href="#刷题内容" class="headerlink" title="刷题内容"></a>刷题内容</h2><blockquote>
-<p>原题连接</p>
-</blockquote>
+            <h1 id="949-Largest-Time-for-Given-Digits"><a href="#949-Largest-Time-for-Given-Digits" class="headerlink" title="949. Largest Time for Given Digits"></a>949. Largest Time for Given Digits</h1><p>难度:Easy</p>
+<h2 id="刷题内容"><a href="#刷题内容" class="headerlink" title="刷题内容"></a>刷题内容</h2><p> 题目:<br><a href="https://leetcode.com/problems/largest-time-for-given-digits/" target="_blank" rel="noopener">https://leetcode.com/problems/largest-time-for-given-digits/</a></p>
+<p>题意：</p>
+<ol>
+<li>给4个0-9的数字</li>
+<li>求能组成最大的时间，时间格式是hh:mm</li>
+</ol>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>思路：</p>
 <ul>
-<li><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/description/" target="_blank" rel="noopener">https://leetcode.com/problems/longest-substring-without-repeating-characters/description/</a></li>
+<li>枚举所有的hh:mm的格式</li>
+<li>判断是否符合时间的要求，hh&lt;24，mm&lt;60</li>
+<li>寻找最大的时间</li>
 </ul>
-<blockquote>
-<p>内容描述</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Given a string, find the length of the longest substring without repeating characters.</span><br><span class="line"></span><br><span class="line">Example 1:</span><br><span class="line"></span><br><span class="line">Input: &quot;abcabcbb&quot;</span><br><span class="line">Output: 3 </span><br><span class="line">Explanation: The answer is &quot;abc&quot;, with the length of 3. </span><br><span class="line">Example 2:</span><br><span class="line"></span><br><span class="line">Input: &quot;bbbbb&quot;</span><br><span class="line">Output: 1</span><br><span class="line">Explanation: The answer is &quot;b&quot;, with the length of 1.</span><br><span class="line">Example 3:</span><br><span class="line"></span><br><span class="line">Input: &quot;pwwkew&quot;</span><br><span class="line">Output: 3</span><br><span class="line">Explanation: The answer is &quot;wke&quot;, with the length of 3. </span><br><span class="line">             Note that the answer must be a substring, &quot;pwke&quot; is a subsequence and not a substring.</span><br></pre></td></tr></table></figure>
+<p>解法：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="built_in">string</span> <span class="title">largestTimeFromDigits</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; A)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">string</span> ret = <span class="string">""</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; <span class="number">4</span>;i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>;j &lt; <span class="number">4</span>;j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (i == j) <span class="keyword">continue</span>;</span><br><span class="line">                <span class="keyword">if</span> (A[i] * <span class="number">10</span> + A[j] &gt;= <span class="number">24</span>) <span class="keyword">continue</span>;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>;k &lt; <span class="number">4</span>;k++) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (i == k || j == k) <span class="keyword">continue</span>;</span><br><span class="line">                    <span class="keyword">for</span> (<span class="keyword">int</span> l = <span class="number">0</span>;l &lt; <span class="number">4</span>;l++) &#123;</span><br><span class="line">                        <span class="keyword">if</span> (i == l || j == l || k == l) <span class="keyword">continue</span>;</span><br><span class="line">                        <span class="built_in">string</span> s = <span class="string">""</span>;</span><br><span class="line">                        <span class="keyword">if</span> (A[k] * <span class="number">10</span> + A[l] &gt;= <span class="number">60</span>) <span class="keyword">continue</span>;</span><br><span class="line">                        s = <span class="built_in">string</span>(<span class="string">""</span>) + <span class="keyword">char</span>(A[i] + <span class="string">'0'</span>) + <span class="keyword">char</span>(A[j] + <span class="string">'0'</span>) + <span class="string">":"</span> + <span class="keyword">char</span>(A[k] + <span class="string">'0'</span>) + <span class="keyword">char</span>(A[l] + <span class="string">'0'</span>);</span><br><span class="line">                        <span class="keyword">if</span> (ret &lt; s) &#123;</span><br><span class="line">                            ret = s;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-<h2 id="解题方案"><a href="#解题方案" class="headerlink" title="解题方案"></a>解题方案</h2><blockquote>
-<p>思路 1<br><strong>**</strong>- 时间复杂度: O(NlgN)<strong>**</strong>- 空间复杂度: O(N)<strong>**</strong></p>
-</blockquote>
-<p>用 map储存 key为字符，value 为这个字符的位置，我们可以维护一个子字符串(无重复字符)，记录它的起始位置，遍历 string s 当无法在map中找到字符或者小于子字符串的起始位置，就是没有在这个字符串中出现，反之则字符重复，不过 map查找为 O(lgn)，因此总的时间复杂度为O(NlgN)</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">lengthOfLongestSubstring</span><span class="params">(<span class="built_in">string</span> s)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">map</span>&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; m;</span><br><span class="line">    <span class="keyword">int</span> beg = <span class="number">0</span>,length = s.length(),ll = <span class="number">0</span>,ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; length;++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(m.find(s[i]) == m.end() || m[s[i]] &lt; beg)</span><br><span class="line">            ll++;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> pos = m[s[i]];</span><br><span class="line">            ans = max(ll,ans);</span><br><span class="line">            ll = ll - (pos - beg);</span><br><span class="line">            beg = pos + <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        m[s[i]] = i;</span><br><span class="line">    &#125;</span><br><span class="line">    ans = max(ans,ll);</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>思路 2<br><strong>**</strong>- 时间复杂度: O(NlgN)<strong>**</strong>- 空间复杂度: O(1)<strong>**</strong></p>
-</blockquote>
-<p>这个思路和上面差不多，用到了一个小窍门，因为储存的是字符，char为8位，因此能储存的最大数为256，这样空间复杂度就为O(1)</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">lengthOfLongestSubstring</span><span class="params">(<span class="built_in">string</span> s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> m[<span class="number">256</span>];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; <span class="number">256</span>;++i)</span><br><span class="line">        m[i] = <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">int</span> beg = <span class="number">0</span>,length = s.length(),ll = <span class="number">0</span>,ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; length;++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(m[s[i]] &lt; beg)</span><br><span class="line">            ll++;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> pos = m[s[i]];</span><br><span class="line">            ans = max(ll,ans);</span><br><span class="line">            ll = ll - (pos - beg);</span><br><span class="line">            beg = pos + <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        m[s[i]] = i;</span><br><span class="line">    &#125;</span><br><span class="line">    ans = max(ans,ll);</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
           
         
@@ -675,7 +696,7 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/07/LeetCode_Cpp/0950._Reveal_Cards_In_Increasing_Order/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="鸭脖">
+      <meta itemprop="name" content="在沪的中原汉子">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/header2.jpg">
     </span>
@@ -728,6 +749,17 @@
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/C/" itemprop="url" rel="index">
                     <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
                   </a>
                 </span>
 
@@ -864,10 +896,10 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/07/LeetCode_Cpp/0949._Largest_Time_for_Given_Digits/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/07/LeetCode_Cpp/0951._Flip_Equivalent_Binary_Trees/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="鸭脖">
+      <meta itemprop="name" content="在沪的中原汉子">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/header2.jpg">
     </span>
@@ -883,7 +915,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/04/07/LeetCode_Cpp/0949._Largest_Time_for_Given_Digits/" itemprop="url">949. Largest Time for Given Digits</a></h1>
+                <a class="post-title-link" href="/2020/04/07/LeetCode_Cpp/0951._Flip_Equivalent_Binary_Trees/" itemprop="url">951. Flip Equivalent Binary Trees</a></h1>
         
 
         <div class="post-meta">
@@ -920,6 +952,17 @@
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/C/" itemprop="url" rel="index">
                     <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
                   </a>
                 </span>
 
@@ -988,21 +1031,27 @@
       
         
           
-            <h1 id="949-Largest-Time-for-Given-Digits"><a href="#949-Largest-Time-for-Given-Digits" class="headerlink" title="949. Largest Time for Given Digits"></a>949. Largest Time for Given Digits</h1><p>难度:Easy</p>
-<h2 id="刷题内容"><a href="#刷题内容" class="headerlink" title="刷题内容"></a>刷题内容</h2><p> 题目:<br><a href="https://leetcode.com/problems/largest-time-for-given-digits/" target="_blank" rel="noopener">https://leetcode.com/problems/largest-time-for-given-digits/</a></p>
+            <h1 id="951-Flip-Equivalent-Binary-Trees"><a href="#951-Flip-Equivalent-Binary-Trees" class="headerlink" title="951. Flip Equivalent Binary Trees"></a>951. Flip Equivalent Binary Trees</h1><p>难度:Medium</p>
+<h2 id="刷题内容"><a href="#刷题内容" class="headerlink" title="刷题内容"></a>刷题内容</h2><p>题目:<br><a href="https://leetcode.com/problems/flip-equivalent-binary-trees/" target="_blank" rel="noopener">https://leetcode.com/problems/flip-equivalent-binary-trees/</a></p>
 <p>题意：</p>
 <ol>
-<li>给4个0-9的数字</li>
-<li>求能组成最大的时间，时间格式是hh:mm</li>
+<li>给两棵树</li>
+<li>两棵树可以做交换左右子树的操作</li>
+<li>求两棵树是否能通过某些操作，使得两棵树一模一样</li>
 </ol>
 <h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>思路：</p>
 <ul>
-<li>枚举所有的hh:mm的格式</li>
-<li>判断是否符合时间的要求，hh&lt;24，mm&lt;60</li>
-<li>寻找最大的时间</li>
+<li>递归判断<ul>
+<li>两个都为空，返回true</li>
+<li>一个为空，返回false</li>
+<li>根的值不同，返回false</li>
+<li>递归判断左子树和右子树，判断左右两棵对应的子树是否为true，或者交换下子树，判断是否为true，返回true</li>
+<li>其他情况返回false</li>
+</ul>
+</li>
 </ul>
 <p>解法：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="built_in">string</span> <span class="title">largestTimeFromDigits</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; A)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">string</span> ret = <span class="string">""</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; <span class="number">4</span>;i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>;j &lt; <span class="number">4</span>;j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (i == j) <span class="keyword">continue</span>;</span><br><span class="line">                <span class="keyword">if</span> (A[i] * <span class="number">10</span> + A[j] &gt;= <span class="number">24</span>) <span class="keyword">continue</span>;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>;k &lt; <span class="number">4</span>;k++) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (i == k || j == k) <span class="keyword">continue</span>;</span><br><span class="line">                    <span class="keyword">for</span> (<span class="keyword">int</span> l = <span class="number">0</span>;l &lt; <span class="number">4</span>;l++) &#123;</span><br><span class="line">                        <span class="keyword">if</span> (i == l || j == l || k == l) <span class="keyword">continue</span>;</span><br><span class="line">                        <span class="built_in">string</span> s = <span class="string">""</span>;</span><br><span class="line">                        <span class="keyword">if</span> (A[k] * <span class="number">10</span> + A[l] &gt;= <span class="number">60</span>) <span class="keyword">continue</span>;</span><br><span class="line">                        s = <span class="built_in">string</span>(<span class="string">""</span>) + <span class="keyword">char</span>(A[i] + <span class="string">'0'</span>) + <span class="keyword">char</span>(A[j] + <span class="string">'0'</span>) + <span class="string">":"</span> + <span class="keyword">char</span>(A[k] + <span class="string">'0'</span>) + <span class="keyword">char</span>(A[l] + <span class="string">'0'</span>);</span><br><span class="line">                        <span class="keyword">if</span> (ret &lt; s) &#123;</span><br><span class="line">                            ret = s;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * struct TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode *left;</span></span><br><span class="line"><span class="comment"> *     TreeNode *right;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x) : val(x), left(NULL), right(NULL) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">flipEquiv</span><span class="params">(TreeNode* root1, TreeNode* root2)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!root1 &amp;&amp; !root2) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (!root1 || !root2) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125; </span><br><span class="line">        <span class="keyword">if</span> (root1-&gt;val != root2-&gt;val) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (flipEquiv(root1-&gt;left, root2-&gt;left) &amp;&amp; flipEquiv(root1-&gt;right, root2-&gt;right)) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (flipEquiv(root1-&gt;left, root2-&gt;right) &amp;&amp; flipEquiv(root1-&gt;right, root2-&gt;left)) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 
           
@@ -1055,7 +1104,7 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/07/LeetCode_Cpp/0952._Largest_Component_Size_by_Common_Factor/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="鸭脖">
+      <meta itemprop="name" content="在沪的中原汉子">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/header2.jpg">
     </span>
@@ -1108,6 +1157,17 @@
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/C/" itemprop="url" rel="index">
                     <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
                   </a>
                 </span>
 
@@ -1250,10 +1310,10 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/07/LeetCode_Cpp/0096._Unique_Binary_Search_Trees/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/07/LeetCode_Cpp/0097._Interleaving_String/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="鸭脖">
+      <meta itemprop="name" content="在沪的中原汉子">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/header2.jpg">
     </span>
@@ -1269,7 +1329,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/04/07/LeetCode_Cpp/0096._Unique_Binary_Search_Trees/" itemprop="url">96. Unique Binary Search Trees</a></h1>
+                <a class="post-title-link" href="/2020/04/07/LeetCode_Cpp/0097._Interleaving_String/" itemprop="url">97. Interleaving String</a></h1>
         
 
         <div class="post-meta">
@@ -1306,6 +1366,17 @@
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/C/" itemprop="url" rel="index">
                     <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
                   </a>
                 </span>
 
@@ -1374,25 +1445,23 @@
       
         
           
-            <h1 id="96-Unique-Binary-Search-Trees"><a href="#96-Unique-Binary-Search-Trees" class="headerlink" title="96. Unique Binary Search Trees"></a>96. Unique Binary Search Trees</h1><p> 难度: Medium</p>
+            <h1 id="97-Interleaving-String"><a href="#97-Interleaving-String" class="headerlink" title="97. Interleaving String"></a>97. Interleaving String</h1><p><strong><font color=red>难度:Hard<font></strong></p>
 <h2 id="刷题内容"><a href="#刷题内容" class="headerlink" title="刷题内容"></a>刷题内容</h2><blockquote>
 <p>原题连接</p>
 </blockquote>
 <ul>
-<li><p><a href="https://leetcode-cn.com/problems/unique-binary-search-trees/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/unique-binary-search-trees/</a></p>
+<li><a href="https://leetcode.com/problems/interleaving-string/" target="_blank" rel="noopener">https://leetcode.com/problems/interleaving-string/</a></li>
+</ul>
 <blockquote>
 <p>内容描述</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">给定一个整数 n，求以 1 ... n 为节点组成的二叉搜索树有多少种？</span><br><span class="line"></span><br><span class="line">示例:</span><br><span class="line"></span><br><span class="line">输入: 3</span><br><span class="line">输出: 5</span><br><span class="line">解释:</span><br><span class="line">给定 n &#x3D; 3, 一共有 5 种不同结构的二叉搜索树:</span><br><span class="line"></span><br><span class="line">   1         3     3      2      1</span><br><span class="line">    \       &#x2F;     &#x2F;      &#x2F; \      \</span><br><span class="line">     3     2     1      1   3      2</span><br><span class="line">    &#x2F;     &#x2F;       \                 \</span><br><span class="line">   2     1         2                 3</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Given s1, s2, s3, find whether s3 is formed by the interleaving of s1 and s2.</span><br><span class="line"></span><br><span class="line">Example 1:</span><br><span class="line"></span><br><span class="line">Input: s1 &#x3D; &quot;aabcc&quot;, s2 &#x3D; &quot;dbbca&quot;, s3 &#x3D; &quot;aadbbcbcac&quot;</span><br><span class="line">Output: true</span><br><span class="line">Example 2:</span><br><span class="line"></span><br><span class="line">Input: s1 &#x3D; &quot;aabcc&quot;, s2 &#x3D; &quot;dbbca&quot;, s3 &#x3D; &quot;aadbbbaccc&quot;</span><br><span class="line">Output: false</span><br></pre></td></tr></table></figure>
 
-</li>
-</ul>
-<h2 id="解题方案"><a href="#解题方案" class="headerlink" title="解题方案"></a>解题方案</h2><blockquote>
-<p>思路 1</p>
+<blockquote>
+<p>思路<br><strong>**</strong>- 时间复杂度: O(N^2)<strong>**</strong>- 空间复杂度: O(N^2)<strong>**</strong></p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">假设有n个节点，左右子树有（0，n-1）(1,n-2)...(n-1, 0)等情况</span><br><span class="line">子结构：</span><br><span class="line">dp[i] &#x3D; dp[0]*dp[i-1]+...+dp[i-1]*dp[0]</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">numTrees</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">dp</span><span class="params">(n+<span class="number">1</span>, <span class="number">0</span>)</span></span>;</span><br><span class="line">    dp[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">    dp[<span class="number">1</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n;i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;i;j++)&#123;</span><br><span class="line">            dp[i] += dp[i-j<span class="number">-1</span>]*dp[j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dp[n];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>一般用暴力的方法去解这题，时间复杂度为O(2^n)，时间复杂度为指数级，肯定超时。因此我们可以用动态规划将时间复杂度优化到O(n^2)。解动态规划的关键就是找到状态转移方程，定义二维数组 dp[i][j]，表示 s1[i]和 s2[j]之后的子串是否能组成s3[i + j]。这样我们就能写出状态转移方程，<code>dp[i][j] = (s1[i] == s3[i + j] &amp;&amp; dp[i + 1][j]) || (s2[j] == s3[i + j] &amp;&amp; dp[i][j + 1])</code></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">isInterleave</span><span class="params">(<span class="built_in">string</span> s1, <span class="built_in">string</span> s2, <span class="built_in">string</span> s3)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> l1 = s1.length(),l2 = s2.length(),l3 = s3.length();</span><br><span class="line">        <span class="keyword">if</span>(l1 + l2 != s3.length())</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> dp[l1 + <span class="number">2</span>][l2 + <span class="number">2</span>];</span><br><span class="line">        <span class="built_in">memset</span>(dp,<span class="number">0</span>,<span class="keyword">sizeof</span>(dp));</span><br><span class="line">        dp[l1][l2] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = l1;i &gt;= <span class="number">0</span>;--i)</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = l2;j &gt;= <span class="number">0</span>;--j)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span>(i &lt; l1 &amp;&amp; s1[i] == s3[i + j] &amp;&amp; dp[i + <span class="number">1</span>][j])</span><br><span class="line">                    dp[i][j] = <span class="number">1</span>;</span><br><span class="line">                <span class="keyword">if</span>(j &lt; l2 &amp;&amp; s2[j] == s3[i + j] &amp;&amp; dp[i][j + <span class="number">1</span>])</span><br><span class="line">                    dp[i][j] = <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">return</span> dp[<span class="number">0</span>][<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
           
         
       
@@ -1468,10 +1537,10 @@
             
               <img class="site-author-image" itemprop="image"
                 src="/images/header2.jpg"
-                alt="鸭脖" />
+                alt="在沪的中原汉子" />
             
-              <p class="site-author-name" itemprop="name">鸭脖</p>
-              <p class="site-description motion-element" itemprop="description">在沪的中原汉子</p>
+              <p class="site-author-name" itemprop="name">在沪的中原汉子</p>
+              <p class="site-description motion-element" itemprop="description">yaboyuanyabo@163.com</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -1492,7 +1561,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1520,6 +1589,28 @@
             </div>
           
 
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/caesar-yabo" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.zhihu.com/people/xiao-bing-da-bo" target="_blank" title="ZhiHu">
+                      
+                        <i class="fa fa-fw fa-zhihu"></i>ZhiHu</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://mail.163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
           
 
           
@@ -1551,7 +1642,7 @@
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">鸭脖</span>
+  <span class="author" itemprop="copyrightHolder">在沪的中原汉子</span>
 
   
     <span class="post-meta-divider">|</span>
