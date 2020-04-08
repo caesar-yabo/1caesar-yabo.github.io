@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="C++,LeetCode," />
+  <meta name="keywords" content="C++,LeetCode,Medium," />
 
 
 
@@ -81,17 +81,18 @@
 
 
 
-<meta name="description" content="16. 3Sum Closest难度：Medium 内容 原题链接：https:&#x2F;&#x2F;leetcode.com&#x2F;problems&#x2F;3sum-closest&#x2F;description&#x2F;  Given an array nums of n integers and an integer target, find three integers in nums such that the sum is clo">
+<meta name="description" content="16. 3Sum Closest难度：Medium 刷题内容 原题链接：https:&#x2F;&#x2F;leetcode.com&#x2F;problems&#x2F;3sum-closest&#x2F;description&#x2F;  Given an array nums of n integers and an integer target, find three integers in nums such that the sum is c">
 <meta property="og:type" content="article">
 <meta property="og:title" content="16. 3Sum Closest">
 <meta property="og:url" content="http://yoursite.com/2020/04/07/LeetCode_Cpp/0016._3Sum_Closest/index.html">
 <meta property="og:site_name" content="鸭脖，麻辣的">
-<meta property="og:description" content="16. 3Sum Closest难度：Medium 内容 原题链接：https:&#x2F;&#x2F;leetcode.com&#x2F;problems&#x2F;3sum-closest&#x2F;description&#x2F;  Given an array nums of n integers and an integer target, find three integers in nums such that the sum is clo">
+<meta property="og:description" content="16. 3Sum Closest难度：Medium 刷题内容 原题链接：https:&#x2F;&#x2F;leetcode.com&#x2F;problems&#x2F;3sum-closest&#x2F;description&#x2F;  Given an array nums of n integers and an integer target, find three integers in nums such that the sum is c">
 <meta property="article:published_time" content="2020-04-06T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-04-07T13:46:13.899Z">
+<meta property="article:modified_time" content="2020-04-08T01:20:04.545Z">
 <meta property="article:author" content="鸭脖">
 <meta property="article:tag" content="C++">
 <meta property="article:tag" content="LeetCode">
+<meta property="article:tag" content="Medium">
 <meta name="twitter:card" content="summary">
 
 
@@ -410,15 +411,17 @@
 
       
         <h2 id="16-3Sum-Closest"><a href="#16-3Sum-Closest" class="headerlink" title="16. 3Sum Closest"></a>16. 3Sum Closest</h2><p>难度：Medium</p>
-<h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><blockquote>
+<h2 id="刷题内容"><a href="#刷题内容" class="headerlink" title="刷题内容"></a>刷题内容</h2><blockquote>
 <p>原题链接：<a href="https://leetcode.com/problems/3sum-closest/description/" target="_blank" rel="noopener">https://leetcode.com/problems/3sum-closest/description/</a></p>
 </blockquote>
 <p>Given an array nums of n integers and an integer target, find three integers in nums such that the sum is closest to target. Return the sum of the three integers. You may assume that each input would have exactly one solution.</p>
 <p>Example:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Given array nums &#x3D; [-1, 2, 1, -4], and target &#x3D; 1.</span><br><span class="line"></span><br><span class="line">The sum that is closest to the target is 2. (-1 + 2 + 1 &#x3D; 2).</span><br></pre></td></tr></table></figure>
 
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>先排序，遍历第一个数，第二和第三个数通过双指针查找，转化为2sum closest的问题。如果遇到和等于target的三个数，直接返回target。</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int threeSumClosest(vector&lt;int&gt;&amp; nums, int target) &#123;</span><br><span class="line">        std::sort(nums.begin(), nums.end());</span><br><span class="line">        int min_distance&#123;INT_MAX&#125;, sum&#123;0&#125;, cur_sum&#123;0&#125;;</span><br><span class="line">        for (auto it &#x3D; nums.cbegin(); it !&#x3D; nums.cend(); ++it)</span><br><span class="line">            for (auto left_idx &#x3D; std::next(it), right_idx &#x3D; std::prev(nums.cend()); left_idx &lt; right_idx; cur_sum &gt; target ? --right_idx : ++left_idx) &#123;</span><br><span class="line">                cur_sum &#x3D; *it + *left_idx + *right_idx;</span><br><span class="line">                auto cur_distance &#x3D; std::abs(cur_sum - target);</span><br><span class="line">                if (cur_sum &#x3D;&#x3D; target)</span><br><span class="line">                    return target;</span><br><span class="line">                else if (cur_distance &lt; min_distance) &#123;</span><br><span class="line">                    min_distance &#x3D; cur_distance;</span><br><span class="line">                    sum &#x3D; cur_sum;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        return sum;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="解题方案"><a href="#解题方案" class="headerlink" title="解题方案"></a>解题方案</h2><blockquote>
+<p>先排序，遍历第一个数，第二和第三个数通过双指针查找，转化为2sum closest的问题。如果遇到和等于target的三个数，直接返回target。</p>
+</blockquote>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">threeSumClosest</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">std</span>::sort(nums.begin(), nums.end());</span><br><span class="line">        <span class="keyword">int</span> min_distance&#123;INT_MAX&#125;, sum&#123;<span class="number">0</span>&#125;, cur_sum&#123;<span class="number">0</span>&#125;;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">auto</span> it = nums.cbegin(); it != nums.cend(); ++it)</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">auto</span> left_idx = <span class="built_in">std</span>::next(it), right_idx = <span class="built_in">std</span>::prev(nums.cend()); left_idx &lt; right_idx; cur_sum &gt; target ? --right_idx : ++left_idx) &#123;</span><br><span class="line">                cur_sum = *it + *left_idx + *right_idx;</span><br><span class="line">                <span class="keyword">auto</span> cur_distance = <span class="built_in">std</span>::<span class="built_in">abs</span>(cur_sum - target);</span><br><span class="line">                <span class="keyword">if</span> (cur_sum == target)</span><br><span class="line">                    <span class="keyword">return</span> target;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span> (cur_distance &lt; min_distance) &#123;</span><br><span class="line">                    min_distance = cur_distance;</span><br><span class="line">                    sum = cur_sum;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">return</span> sum;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -440,6 +443,8 @@
           
             <a href="/tags/LeetCode/" rel="tag"># LeetCode</a>
           
+            <a href="/tags/Medium/" rel="tag"># Medium</a>
+          
         </div>
       
 
@@ -451,8 +456,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/04/07/LeetCode_Cpp/0011._container_with_most_water/" rel="next" title="11. container with most water">
-                <i class="fa fa-chevron-left"></i> 11. container with most water
+              <a href="/2020/04/07/LeetCode_Cpp/0015._3sum/" rel="next" title="15. 3sum">
+                <i class="fa fa-chevron-left"></i> 15. 3sum
               </a>
             
           </div>
@@ -461,8 +466,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/04/07/LeetCode_Cpp/0015._3sum/" rel="prev" title="15. 3sum">
-                15. 3sum <i class="fa fa-chevron-right"></i>
+              <a href="/2020/04/07/LeetCode_Cpp/0018._4Sum/" rel="prev" title="18. 4Sum">
+                18. 4Sum <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -566,7 +571,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -606,7 +611,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#16-3Sum-Closest"><span class="nav-number">1.</span> <span class="nav-text">16. 3Sum Closest</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内容"><span class="nav-number">2.</span> <span class="nav-text">内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#思路"><span class="nav-number">3.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">4.</span> <span class="nav-text">代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#16-3Sum-Closest"><span class="nav-number">1.</span> <span class="nav-text">16. 3Sum Closest</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#刷题内容"><span class="nav-number">2.</span> <span class="nav-text">刷题内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解题方案"><span class="nav-number">3.</span> <span class="nav-text">解题方案</span></a></li></ol></div>
             
 
           </div>

@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="C++,LeetCode," />
+  <meta name="keywords" content="C++,LeetCode,Easy," />
 
 
 
@@ -81,17 +81,18 @@
 
 
 
-<meta name="description" content="167. Two Sum II - Input array is sorted难度：Easy 内容原题链接：https:&#x2F;&#x2F;leetcode.com&#x2F;problems&#x2F;two-sum-ii-input-array-is-sorted&#x2F;description&#x2F; Given an array of integers that is already sorted in ascending order,">
+<meta name="description" content="167. Two Sum II - Input array is sorted难度：Easy 刷题内容原题链接：https:&#x2F;&#x2F;leetcode.com&#x2F;problems&#x2F;two-sum-ii-input-array-is-sorted&#x2F;description&#x2F; Given an array of integers that is already sorted in ascending order">
 <meta property="og:type" content="article">
 <meta property="og:title" content="167. Two Sum II - Input array is sorted">
 <meta property="og:url" content="http://yoursite.com/2020/04/07/LeetCode_Cpp/0167._Two_Sum_II-Input_array_is_sorted/index.html">
 <meta property="og:site_name" content="鸭脖，麻辣的">
-<meta property="og:description" content="167. Two Sum II - Input array is sorted难度：Easy 内容原题链接：https:&#x2F;&#x2F;leetcode.com&#x2F;problems&#x2F;two-sum-ii-input-array-is-sorted&#x2F;description&#x2F; Given an array of integers that is already sorted in ascending order,">
+<meta property="og:description" content="167. Two Sum II - Input array is sorted难度：Easy 刷题内容原题链接：https:&#x2F;&#x2F;leetcode.com&#x2F;problems&#x2F;two-sum-ii-input-array-is-sorted&#x2F;description&#x2F; Given an array of integers that is already sorted in ascending order">
 <meta property="article:published_time" content="2020-04-06T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-04-07T15:25:30.646Z">
+<meta property="article:modified_time" content="2020-04-08T02:07:45.308Z">
 <meta property="article:author" content="鸭脖">
 <meta property="article:tag" content="C++">
 <meta property="article:tag" content="LeetCode">
+<meta property="article:tag" content="Easy">
 <meta name="twitter:card" content="summary">
 
 
@@ -410,7 +411,7 @@
 
       
         <h2 id="167-Two-Sum-II-Input-array-is-sorted"><a href="#167-Two-Sum-II-Input-array-is-sorted" class="headerlink" title="167. Two Sum II - Input array is sorted"></a>167. Two Sum II - Input array is sorted</h2><p>难度：Easy</p>
-<h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><p>原题链接：<a href="https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/" target="_blank" rel="noopener">https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/</a></p>
+<h2 id="刷题内容"><a href="#刷题内容" class="headerlink" title="刷题内容"></a>刷题内容</h2><p>原题链接：<a href="https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/" target="_blank" rel="noopener">https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/</a></p>
 <p>Given an array of integers that is already <strong>sorted in ascending order</strong>, find two numbers such that they add up to a specific target number.</p>
 <p>The function twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2.</p>
 <p><strong>Note:</strong></p>
@@ -421,12 +422,12 @@
 <p><strong>Example:</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: numbers &#x3D; [2,7,11,15], target &#x3D; 9</span><br><span class="line">Output: [1,2]</span><br><span class="line">Explanation: The sum of 2 and 7 is 9. Therefore index1 &#x3D; 1, index2 &#x3D; 2.</span><br></pre></td></tr></table></figure>
 
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>关键点：</p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>关键点：</p>
 <ul>
 <li>升序排列</li>
 <li>一定有解</li>
 </ul>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    vector&lt;int&gt; twoSum(vector&lt;int&gt;&amp; numbers, int target) &#123;</span><br><span class="line">        int left &#x3D; 0, right &#x3D; numbers.size() - 1;</span><br><span class="line">        while (left &lt; right) &#123;</span><br><span class="line">            int sum &#x3D; numbers[left] + numbers[right];</span><br><span class="line">            if (sum &lt; target) </span><br><span class="line">                left++;</span><br><span class="line">            else if (sum &gt; target) </span><br><span class="line">                right--;</span><br><span class="line">            else </span><br><span class="line">                return &#123;left + 1, right + 1&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">        return &#123;0, 0&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    vector&lt;int&gt; twoSum(vector&lt;int&gt;&amp; numbers, int target) &#123;</span><br><span class="line">        int left &#x3D; 0, right &#x3D; numbers.size() - 1;</span><br><span class="line">        while (left &lt; right) &#123;</span><br><span class="line">            int sum &#x3D; numbers[left] + numbers[right];</span><br><span class="line">            if (sum &lt; target) </span><br><span class="line">                left++;</span><br><span class="line">            else if (sum &gt; target) </span><br><span class="line">                right--;</span><br><span class="line">            else </span><br><span class="line">                return &#123;left + 1, right + 1&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">        return &#123;0, 0&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 
       
@@ -449,6 +450,8 @@
           
             <a href="/tags/LeetCode/" rel="tag"># LeetCode</a>
           
+            <a href="/tags/Easy/" rel="tag"># Easy</a>
+          
         </div>
       
 
@@ -460,8 +463,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/04/07/LeetCode_Cpp/0154._Find_Minimum_in_Rotated_Sorted_Array-II/" rel="next" title="154. Find Minimum in Rotated Sorted Array II">
-                <i class="fa fa-chevron-left"></i> 154. Find Minimum in Rotated Sorted Array II
+              <a href="/2020/04/07/LeetCode_Cpp/0199._Binary_Tree_Right_Side_View/" rel="next" title="199. Binary Tree Right Side View">
+                <i class="fa fa-chevron-left"></i> 199. Binary Tree Right Side View
               </a>
             
           </div>
@@ -575,7 +578,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -615,7 +618,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#167-Two-Sum-II-Input-array-is-sorted"><span class="nav-number">1.</span> <span class="nav-text">167. Two Sum II - Input array is sorted</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内容"><span class="nav-number">2.</span> <span class="nav-text">内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#思路"><span class="nav-number">3.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">4.</span> <span class="nav-text">代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#167-Two-Sum-II-Input-array-is-sorted"><span class="nav-number">1.</span> <span class="nav-text">167. Two Sum II - Input array is sorted</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#刷题内容"><span class="nav-number">2.</span> <span class="nav-text">刷题内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决方案"><span class="nav-number">3.</span> <span class="nav-text">解决方案</span></a></li></ol></div>
             
 
           </div>

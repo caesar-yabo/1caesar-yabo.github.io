@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="C++,LeetCode," />
+  <meta name="keywords" content="C++,LeetCode,Hard," />
 
 
 
@@ -81,17 +81,18 @@
 
 
 
-<meta name="description" content="154. Find Minimum in Rotated Sorted Array II难度：Hard 内容题目链接：https:&#x2F;&#x2F;leetcode.com&#x2F;problems&#x2F;find-minimum-in-rotated-sorted-array-ii&#x2F;description&#x2F; Suppose an array sorted in ascending order is rotated at s">
+<meta name="description" content="154. Find Minimum in Rotated Sorted Array II难度：Hard 刷题内容题目链接：https:&#x2F;&#x2F;leetcode.com&#x2F;problems&#x2F;find-minimum-in-rotated-sorted-array-ii&#x2F;description&#x2F; Suppose an array sorted in ascending order is rotated at">
 <meta property="og:type" content="article">
 <meta property="og:title" content="154. Find Minimum in Rotated Sorted Array II">
 <meta property="og:url" content="http://yoursite.com/2020/04/07/LeetCode_Cpp/0154._Find_Minimum_in_Rotated_Sorted_Array-II/index.html">
 <meta property="og:site_name" content="鸭脖，麻辣的">
-<meta property="og:description" content="154. Find Minimum in Rotated Sorted Array II难度：Hard 内容题目链接：https:&#x2F;&#x2F;leetcode.com&#x2F;problems&#x2F;find-minimum-in-rotated-sorted-array-ii&#x2F;description&#x2F; Suppose an array sorted in ascending order is rotated at s">
+<meta property="og:description" content="154. Find Minimum in Rotated Sorted Array II难度：Hard 刷题内容题目链接：https:&#x2F;&#x2F;leetcode.com&#x2F;problems&#x2F;find-minimum-in-rotated-sorted-array-ii&#x2F;description&#x2F; Suppose an array sorted in ascending order is rotated at">
 <meta property="article:published_time" content="2020-04-06T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-04-07T15:26:08.073Z">
+<meta property="article:modified_time" content="2020-04-08T02:09:07.773Z">
 <meta property="article:author" content="鸭脖">
 <meta property="article:tag" content="C++">
 <meta property="article:tag" content="LeetCode">
+<meta property="article:tag" content="Hard">
 <meta name="twitter:card" content="summary">
 
 
@@ -410,7 +411,7 @@
 
       
         <h2 id="154-Find-Minimum-in-Rotated-Sorted-Array-II"><a href="#154-Find-Minimum-in-Rotated-Sorted-Array-II" class="headerlink" title="154. Find Minimum in Rotated Sorted Array II"></a>154. Find Minimum in Rotated Sorted Array II</h2><p>难度：Hard</p>
-<h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><p>题目链接：<a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/description/" target="_blank" rel="noopener">https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/description/</a></p>
+<h2 id="刷题内容"><a href="#刷题内容" class="headerlink" title="刷题内容"></a>刷题内容</h2><p>题目链接：<a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/description/" target="_blank" rel="noopener">https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/description/</a></p>
 <p>Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.</p>
 <p>(i.e.,  <code>[0,1,2,4,5,6,7]</code> might become  <code>[4,5,6,7,0,1,2]</code>).</p>
 <p>Find the minimum element.</p>
@@ -426,7 +427,7 @@
 <li>This is a follow up problem to <a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/" target="_blank" rel="noopener">Find Minimum in Rotated Sorted Array</a>.</li>
 <li>Would allow duplicates affect the run-time complexity? How and why?</li>
 </ul>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>这题竟然是hard，好尴尬。最简单时间复杂度为O(n)的方法，我把前一题的代码一行不动的挪过来，Accepted。<br>二分查找法，时间复杂度为O(log(n))。</p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>这题竟然是hard，好尴尬。最简单时间复杂度为O(n)的方法，我把前一题的代码一行不动的挪过来，Accepted。<br>二分查找法，时间复杂度为O(log(n))。</p>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>O(n)，和前一题代码一样</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int findMin(vector&lt;int&gt;&amp; nums) &#123;</span><br><span class="line">        int res_idx &#x3D; 0;</span><br><span class="line">        for (int i &#x3D; 1; i &lt; nums.size(); ++i)</span><br><span class="line">            if (nums[i] &lt; nums[i-1]) &#123;</span><br><span class="line">                res_idx &#x3D; i;</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">        return nums[res_idx];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
@@ -458,6 +459,8 @@
           
             <a href="/tags/LeetCode/" rel="tag"># LeetCode</a>
           
+            <a href="/tags/Hard/" rel="tag"># Hard</a>
+          
         </div>
       
 
@@ -469,8 +472,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/04/07/LeetCode_Cpp/0199._Binary_Tree_Right_Side_View/" rel="next" title="199. Binary Tree Right Side View">
-                <i class="fa fa-chevron-left"></i> 199. Binary Tree Right Side View
+              <a href="/2020/04/07/LeetCode_Cpp/0216._Combination_Sum_III/" rel="next" title="216. Combination Sum III">
+                <i class="fa fa-chevron-left"></i> 216. Combination Sum III
               </a>
             
           </div>
@@ -479,8 +482,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/04/07/LeetCode_Cpp/0167._Two_Sum_II-Input_array_is_sorted/" rel="prev" title="167. Two Sum II - Input array is sorted">
-                167. Two Sum II - Input array is sorted <i class="fa fa-chevron-right"></i>
+              <a href="/2020/04/07/LeetCode_Cpp/0153._Find_Minimum_in_Rotated_Sorted_Array/" rel="prev" title="153. Find Minimum in Rotated Sorted Array">
+                153. Find Minimum in Rotated Sorted Array <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -584,7 +587,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -624,7 +627,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#154-Find-Minimum-in-Rotated-Sorted-Array-II"><span class="nav-number">1.</span> <span class="nav-text">154. Find Minimum in Rotated Sorted Array II</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内容"><span class="nav-number">2.</span> <span class="nav-text">内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#思路"><span class="nav-number">3.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">4.</span> <span class="nav-text">代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#154-Find-Minimum-in-Rotated-Sorted-Array-II"><span class="nav-number">1.</span> <span class="nav-text">154. Find Minimum in Rotated Sorted Array II</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#刷题内容"><span class="nav-number">2.</span> <span class="nav-text">刷题内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决方案"><span class="nav-number">3.</span> <span class="nav-text">解决方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">4.</span> <span class="nav-text">代码</span></a></li></ol></div>
             
 
           </div>

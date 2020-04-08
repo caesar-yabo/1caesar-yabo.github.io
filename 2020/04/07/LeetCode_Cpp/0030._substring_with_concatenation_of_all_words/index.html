@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="C++,LeetCode," />
+  <meta name="keywords" content="C++,LeetCode,Hard," />
 
 
 
@@ -81,17 +81,18 @@
 
 
 
-<meta name="description" content="30.substring with concatenation of all words难度Hard 刷题内容 原题连接   https:&#x2F;&#x2F;leetcode.com&#x2F;problems&#x2F;substring-with-concatenation-of-all-words&#x2F;   内容描述  12345678910111213141516You are given a string, s, and a">
+<meta name="description" content="30.substring with concatenation of all words难度：Hard 刷题内容 原题连接   https:&#x2F;&#x2F;leetcode.com&#x2F;problems&#x2F;substring-with-concatenation-of-all-words&#x2F;   内容描述  12345678910111213141516You are given a string, s, and a">
 <meta property="og:type" content="article">
 <meta property="og:title" content="30.substring with concatenation of all words">
 <meta property="og:url" content="http://yoursite.com/2020/04/07/LeetCode_Cpp/0030._substring_with_concatenation_of_all_words/index.html">
 <meta property="og:site_name" content="鸭脖，麻辣的">
-<meta property="og:description" content="30.substring with concatenation of all words难度Hard 刷题内容 原题连接   https:&#x2F;&#x2F;leetcode.com&#x2F;problems&#x2F;substring-with-concatenation-of-all-words&#x2F;   内容描述  12345678910111213141516You are given a string, s, and a">
+<meta property="og:description" content="30.substring with concatenation of all words难度：Hard 刷题内容 原题连接   https:&#x2F;&#x2F;leetcode.com&#x2F;problems&#x2F;substring-with-concatenation-of-all-words&#x2F;   内容描述  12345678910111213141516You are given a string, s, and a">
 <meta property="article:published_time" content="2020-04-06T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-04-07T13:51:01.480Z">
+<meta property="article:modified_time" content="2020-04-08T01:24:50.558Z">
 <meta property="article:author" content="鸭脖">
 <meta property="article:tag" content="C++">
 <meta property="article:tag" content="LeetCode">
+<meta property="article:tag" content="Hard">
 <meta name="twitter:card" content="summary">
 
 
@@ -409,7 +410,7 @@
       
 
       
-        <h1 id="30-substring-with-concatenation-of-all-words"><a href="#30-substring-with-concatenation-of-all-words" class="headerlink" title="30.substring with concatenation of all words"></a>30.substring with concatenation of all words</h1><p><strong><font color=red>难度Hard</font></strong></p>
+        <h1 id="30-substring-with-concatenation-of-all-words"><a href="#30-substring-with-concatenation-of-all-words" class="headerlink" title="30.substring with concatenation of all words"></a>30.substring with concatenation of all words</h1><p>难度：Hard</p>
 <h2 id="刷题内容"><a href="#刷题内容" class="headerlink" title="刷题内容"></a>刷题内容</h2><blockquote>
 <p>原题连接</p>
 </blockquote>
@@ -420,7 +421,8 @@
 <p>内容描述</p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">You are given a string, s, and a list of words, words, that are all of the same length. Find all starting indices of substring(s) in s that is a concatenation of each word in words exactly once and without any intervening characters.</span><br><span class="line"></span><br><span class="line">Example 1:</span><br><span class="line"></span><br><span class="line">Input:</span><br><span class="line">  s &#x3D; &quot;barfoothefoobarman&quot;,</span><br><span class="line">  words &#x3D; [&quot;foo&quot;,&quot;bar&quot;]</span><br><span class="line">Output: [0,9]</span><br><span class="line">Explanation: Substrings starting at index 0 and 9 are &quot;barfoor&quot; and &quot;foobar&quot; respectively.</span><br><span class="line">The output order does not matter, returning [9,0] is fine too.</span><br><span class="line">Example 2:</span><br><span class="line"></span><br><span class="line">Input:</span><br><span class="line">  s &#x3D; &quot;wordgoodstudentgoodword&quot;,</span><br><span class="line">  words &#x3D; [&quot;word&quot;,&quot;student&quot;]</span><br><span class="line">Output: []</span><br></pre></td></tr></table></figure>
-<blockquote>
+
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><blockquote>
 <p>思路<br><strong>**</strong>- 时间复杂度: O(mlgn)<strong>**</strong>- 空间复杂度: O(m+n)<strong>**</strong></p>
 </blockquote>
 <p>这题可以两个 map 来解决，第一个 map 中存放了 words 中的所有单词和出现的次数，接下来遍历字符串，固定区间的大小为 words 的长度，存入另一个map，两个 map 相等就放入返回数组中</p>
@@ -446,6 +448,8 @@
           
             <a href="/tags/LeetCode/" rel="tag"># LeetCode</a>
           
+            <a href="/tags/Hard/" rel="tag"># Hard</a>
+          
         </div>
       
 
@@ -457,8 +461,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/04/07/LeetCode_Cpp/0039._Combination_Sum/" rel="next" title="39. Combination Sum">
-                <i class="fa fa-chevron-left"></i> 39. Combination Sum
+              <a href="/2020/04/07/LeetCode_Cpp/0029._divide_two_integers/" rel="next" title="29.divide two integers">
+                <i class="fa fa-chevron-left"></i> 29.divide two integers
               </a>
             
           </div>
@@ -467,8 +471,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/04/07/LeetCode_Cpp/0031._Next_Permutatio/" rel="prev" title="31.Next Permutatio">
-                31.Next Permutatio <i class="fa fa-chevron-right"></i>
+              <a href="/2020/04/07/LeetCode_Cpp/0021._Merge%20_Two%20_Sorted%20_Lists/" rel="prev" title="21. Merge Two Sorted Lists">
+                21. Merge Two Sorted Lists <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -572,7 +576,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -612,7 +616,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#30-substring-with-concatenation-of-all-words"><span class="nav-number">1.</span> <span class="nav-text">30.substring with concatenation of all words</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#刷题内容"><span class="nav-number">1.1.</span> <span class="nav-text">刷题内容</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#30-substring-with-concatenation-of-all-words"><span class="nav-number">1.</span> <span class="nav-text">30.substring with concatenation of all words</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#刷题内容"><span class="nav-number">1.1.</span> <span class="nav-text">刷题内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决方案"><span class="nav-number">1.2.</span> <span class="nav-text">解决方案</span></a></li></ol></li></ol></div>
             
 
           </div>

@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="C++,LeetCode," />
+  <meta name="keywords" content="C++,LeetCode,Easy," />
 
 
 
@@ -81,17 +81,18 @@
 
 
 
-<meta name="description" content="112. Path Sum�Ѷ�:Easy ˢ������ ԭ������   https:&#x2F;&#x2F;leetcode.com&#x2F;problems&#x2F;path-sum&#x2F;   ��������  1234567891011121314151617181920212223242526272829303132333435363738394041Given a binary tree and a sum, dete">
+<meta name="description" content="112. Path Sum�Ѷ�:Easy ˢ������ ԭ������   https:&#x2F;&#x2F;leetcode.com&#x2F;problems&#x2F;path-sum&#x2F;   ��������  1234567891011121314151617181920Given a binary tree and a sum, determine if the tree has a root-to-leaf path">
 <meta property="og:type" content="article">
 <meta property="og:title" content="112. Path Sum">
 <meta property="og:url" content="http://yoursite.com/2020/04/07/LeetCode_Cpp/0112._Path_Sum/index.html">
 <meta property="og:site_name" content="鸭脖，麻辣的">
-<meta property="og:description" content="112. Path Sum�Ѷ�:Easy ˢ������ ԭ������   https:&#x2F;&#x2F;leetcode.com&#x2F;problems&#x2F;path-sum&#x2F;   ��������  1234567891011121314151617181920212223242526272829303132333435363738394041Given a binary tree and a sum, dete">
+<meta property="og:description" content="112. Path Sum�Ѷ�:Easy ˢ������ ԭ������   https:&#x2F;&#x2F;leetcode.com&#x2F;problems&#x2F;path-sum&#x2F;   ��������  1234567891011121314151617181920Given a binary tree and a sum, determine if the tree has a root-to-leaf path">
 <meta property="article:published_time" content="2020-04-06T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-04-07T15:36:14.966Z">
+<meta property="article:modified_time" content="2020-04-08T01:43:04.952Z">
 <meta property="article:author" content="鸭脖">
 <meta property="article:tag" content="C++">
 <meta property="article:tag" content="LeetCode">
+<meta property="article:tag" content="Easy">
 <meta name="twitter:card" content="summary">
 
 
@@ -409,7 +410,7 @@
       
 
       
-        <h1 id="112-Path-Sum"><a href="#112-Path-Sum" class="headerlink" title="112. Path Sum"></a>112. Path Sum</h1><p><strong><font color=red>�Ѷ�:Easy<font></strong></p>
+        <h1 id="112-Path-Sum"><a href="#112-Path-Sum" class="headerlink" title="112. Path Sum"></a>112. Path Sum</h1><p>�Ѷ�:Easy</p>
 <h2 id="ˢ������"><a href="#ˢ������" class="headerlink" title="ˢ������"></a>ˢ������</h2><blockquote>
 <p>ԭ������</p>
 </blockquote>
@@ -419,7 +420,9 @@
 <blockquote>
 <p>��������</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.</span><br><span class="line"></span><br><span class="line">Note: A leaf is a node with no children.</span><br><span class="line"></span><br><span class="line">Example:</span><br><span class="line"></span><br><span class="line">Given the below binary tree and sum &#x3D; 22,</span><br><span class="line"></span><br><span class="line">      5</span><br><span class="line">     &#x2F; \</span><br><span class="line">    4   8</span><br><span class="line">   &#x2F;   &#x2F; \</span><br><span class="line">  11  13  4</span><br><span class="line"> &#x2F;  \      \</span><br><span class="line">7    2      1</span><br><span class="line">return true, as there exist a root-to-leaf path 5-&gt;4-&gt;11-&gt;2 which sum is 22.</span><br><span class="line"></span><br><span class="line">&gt; ˼·</span><br><span class="line">******- ʱ�临�Ӷ�: O(N)******- �ռ临�Ӷ�: O(1)******</span><br><span class="line">DFS�������������ֱ���������������������Ƿ���� sum - val ��·��</span><br><span class="line"></span><br><span class="line">?&#96;&#96;&#96;cpp</span><br><span class="line">&#x2F;**</span><br><span class="line"> * Definition for a binary tree node.</span><br><span class="line"> * struct TreeNode &#123;</span><br><span class="line"> *     int val;</span><br><span class="line"> *     TreeNode *left;</span><br><span class="line"> *     TreeNode *right;</span><br><span class="line"> *     TreeNode(int x) : val(x), left(NULL), right(NULL) &#123;&#125;</span><br><span class="line"> * &#125;;</span><br><span class="line"> *&#x2F;</span><br><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    bool hasPathSum(TreeNode* root, int sum) &#123;</span><br><span class="line">        if(root &#x3D;&#x3D; nullptr)</span><br><span class="line">            return false;</span><br><span class="line">        if(root -&gt;right &#x3D;&#x3D; nullptr &amp;&amp; root -&gt;left &#x3D;&#x3D; nullptr)</span><br><span class="line">            return sum - root -&gt;val ? false : true;</span><br><span class="line">        return hasPathSum(root -&gt;left,sum - root -&gt;val) || hasPathSum(root -&gt;right,sum - root -&gt;val); </span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.</span><br><span class="line"></span><br><span class="line">Note: A leaf is a node with no children.</span><br><span class="line"></span><br><span class="line">Example:</span><br><span class="line"></span><br><span class="line">Given the below binary tree and sum &#x3D; 22,</span><br><span class="line"></span><br><span class="line">      5</span><br><span class="line">     &#x2F; \</span><br><span class="line">    4   8</span><br><span class="line">   &#x2F;   &#x2F; \</span><br><span class="line">  11  13  4</span><br><span class="line"> &#x2F;  \      \</span><br><span class="line">7    2      1</span><br><span class="line">return true, as there exist a root-to-leaf path 5-&gt;4-&gt;11-&gt;2 which sum is 22.</span><br><span class="line"></span><br><span class="line">&gt; ˼·</span><br><span class="line">******- ʱ�临�Ӷ�: O(N)******- �ռ临�Ӷ�: O(1)******</span><br><span class="line">DFS�������������ֱ���������������������Ƿ���� sum - val ��·��</span><br></pre></td></tr></table></figure>
+
+<h2 id="�������"><a href="#�������" class="headerlink" title="�������"></a>�������</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * struct TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode *left;</span></span><br><span class="line"><span class="comment"> *     TreeNode *right;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x) : val(x), left(NULL), right(NULL) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">hasPathSum</span><span class="params">(TreeNode* root, <span class="keyword">int</span> sum)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(root == <span class="literal">nullptr</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">if</span>(root -&gt;right == <span class="literal">nullptr</span> &amp;&amp; root -&gt;left == <span class="literal">nullptr</span>)</span><br><span class="line">            <span class="keyword">return</span> sum - root -&gt;val ? <span class="literal">false</span> : <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">return</span> hasPathSum(root -&gt;left,sum - root -&gt;val) || hasPathSum(root -&gt;right,sum - root -&gt;val); </span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -440,6 +443,8 @@
           
             <a href="/tags/LeetCode/" rel="tag"># LeetCode</a>
           
+            <a href="/tags/Easy/" rel="tag"># Easy</a>
+          
         </div>
       
 
@@ -451,8 +456,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/04/07/LeetCode_Cpp/0115._Distinct_Subsequences/" rel="next" title="115.Distinct Subsequences">
-                <i class="fa fa-chevron-left"></i> 115.Distinct Subsequences
+              <a href="/2020/04/07/LeetCode_Cpp/0118._Pascals_Triangle/" rel="next" title="118. Pascal's Triangle">
+                <i class="fa fa-chevron-left"></i> 118. Pascal's Triangle
               </a>
             
           </div>
@@ -461,8 +466,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/04/07/LeetCode_Cpp/0111._minimum_depth_of_binary_tree/" rel="prev" title="111. Minimum Depth of Binary Tree">
-                111. Minimum Depth of Binary Tree <i class="fa fa-chevron-right"></i>
+              <a href="/2020/04/07/LeetCode_Cpp/0115._Distinct_Subsequences/" rel="prev" title="115.Distinct Subsequences">
+                115.Distinct Subsequences <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -566,7 +571,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -606,7 +611,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#112-Path-Sum"><span class="nav-number">1.</span> <span class="nav-text">112. Path Sum</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ˢ������"><span class="nav-number">1.1.</span> <span class="nav-text">ˢ������</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#112-Path-Sum"><span class="nav-number">1.</span> <span class="nav-text">112. Path Sum</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ˢ������"><span class="nav-number">1.1.</span> <span class="nav-text">ˢ������</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#�������"><span class="nav-number">1.2.</span> <span class="nav-text">�������</span></a></li></ol></li></ol></div>
             
 
           </div>

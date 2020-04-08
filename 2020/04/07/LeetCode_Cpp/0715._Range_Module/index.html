@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="C++,LeetCode," />
+  <meta name="keywords" content="C++,LeetCode,Hard," />
 
 
 
@@ -81,17 +81,18 @@
 
 
 
-<meta name="description" content="715. Range Module题目:https:&#x2F;&#x2F;leetcode.com&#x2F;problems&#x2F;range-module&#x2F; 难度:Hard 题意：  设计一种数据结构 操作1：向该数据结构插入一个线段（的所有实数） 操作2：向该数据结构删除一个线段（的所有实数） 操作3：查询一个线段包含的所有实数是否都在这个数据结构中  思路：  线段与线段之间有三种关系，包含，相交，相离。插入一个线段，我们">
+<meta name="description" content="715. Range Module难度:Hard 刷题内容题目:https:&#x2F;&#x2F;leetcode.com&#x2F;problems&#x2F;range-module&#x2F; 题意：  设计一种数据结构 操作1：向该数据结构插入一个线段（的所有实数） 操作2：向该数据结构删除一个线段（的所有实数） 操作3：查询一个线段包含的所有实数是否都在这个数据结构中  解决方案思路：  线段与线段之间有三种关系，包含，相交，相离。插">
 <meta property="og:type" content="article">
 <meta property="og:title" content="715. Range Module">
 <meta property="og:url" content="http://yoursite.com/2020/04/07/LeetCode_Cpp/0715._Range_Module/index.html">
 <meta property="og:site_name" content="鸭脖，麻辣的">
-<meta property="og:description" content="715. Range Module题目:https:&#x2F;&#x2F;leetcode.com&#x2F;problems&#x2F;range-module&#x2F; 难度:Hard 题意：  设计一种数据结构 操作1：向该数据结构插入一个线段（的所有实数） 操作2：向该数据结构删除一个线段（的所有实数） 操作3：查询一个线段包含的所有实数是否都在这个数据结构中  思路：  线段与线段之间有三种关系，包含，相交，相离。插入一个线段，我们">
+<meta property="og:description" content="715. Range Module难度:Hard 刷题内容题目:https:&#x2F;&#x2F;leetcode.com&#x2F;problems&#x2F;range-module&#x2F; 题意：  设计一种数据结构 操作1：向该数据结构插入一个线段（的所有实数） 操作2：向该数据结构删除一个线段（的所有实数） 操作3：查询一个线段包含的所有实数是否都在这个数据结构中  解决方案思路：  线段与线段之间有三种关系，包含，相交，相离。插">
 <meta property="article:published_time" content="2020-04-06T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-04-07T15:46:34.641Z">
+<meta property="article:modified_time" content="2020-04-08T02:21:00.931Z">
 <meta property="article:author" content="鸭脖">
 <meta property="article:tag" content="C++">
 <meta property="article:tag" content="LeetCode">
+<meta property="article:tag" content="Hard">
 <meta name="twitter:card" content="summary">
 
 
@@ -409,8 +410,8 @@
       
 
       
-        <h1 id="715-Range-Module"><a href="#715-Range-Module" class="headerlink" title="715. Range Module"></a>715. Range Module</h1><p>题目:<br><a href="https://leetcode.com/problems/range-module/" target="_blank" rel="noopener">https://leetcode.com/problems/range-module/</a></p>
-<p>难度:<br>Hard</p>
+        <h1 id="715-Range-Module"><a href="#715-Range-Module" class="headerlink" title="715. Range Module"></a>715. Range Module</h1><p>难度:Hard</p>
+<h2 id="刷题内容"><a href="#刷题内容" class="headerlink" title="刷题内容"></a>刷题内容</h2><p>题目:<br><a href="https://leetcode.com/problems/range-module/" target="_blank" rel="noopener">https://leetcode.com/problems/range-module/</a></p>
 <p>题意：</p>
 <ol>
 <li>设计一种数据结构</li>
@@ -418,7 +419,7 @@
 <li>操作2：向该数据结构删除一个线段（的所有实数）</li>
 <li>操作3：查询一个线段包含的所有实数是否都在这个数据结构中</li>
 </ol>
-<p>思路：</p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>思路：</p>
 <ul>
 <li>线段与线段之间有三种关系，包含，相交，相离。插入一个线段，我们需要寻找可能包含和相交的线段来合并</li>
 <li>假设插入的线段为[a,b)，我们需要在已有的线段中寻找包含和相交的线段。假设已有线段为[i,j)，当j&lt;a，这个线段肯定不需要判断。所以我们需要寻找左端点跟a相等，或者比a小的最大值。然后遍历，一个个线段判断，直到i &gt; b</li>
@@ -450,6 +451,8 @@
           
             <a href="/tags/LeetCode/" rel="tag"># LeetCode</a>
           
+            <a href="/tags/Hard/" rel="tag"># Hard</a>
+          
         </div>
       
 
@@ -461,8 +464,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/04/07/LeetCode_Cpp/0719._Find_K-th_Smallest_Pair_Distance/" rel="next" title="793. Find K-th Smallest Pair Distance">
-                <i class="fa fa-chevron-left"></i> 793. Find K-th Smallest Pair Distance
+              <a href="/2020/04/07/LeetCode_Cpp/0701._Insert_into_a_Binary_Search_Tree/" rel="next" title="701. Insert into a Binary Search Tree">
+                <i class="fa fa-chevron-left"></i> 701. Insert into a Binary Search Tree
               </a>
             
           </div>
@@ -471,8 +474,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/04/07/LeetCode_Cpp/0739._Daily_Temperatures/" rel="prev" title="739. Daily Temperatures">
-                739. Daily Temperatures <i class="fa fa-chevron-right"></i>
+              <a href="/2020/04/07/LeetCode_Cpp/0719._Find_K-th_Smallest_Pair_Distance/" rel="prev" title="793. Find K-th Smallest Pair Distance">
+                793. Find K-th Smallest Pair Distance <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -576,7 +579,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -616,7 +619,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#715-Range-Module"><span class="nav-number">1.</span> <span class="nav-text">715. Range Module</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#715-Range-Module"><span class="nav-number">1.</span> <span class="nav-text">715. Range Module</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#刷题内容"><span class="nav-number">1.1.</span> <span class="nav-text">刷题内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决方案"><span class="nav-number">1.2.</span> <span class="nav-text">解决方案</span></a></li></ol></li></ol></div>
             
 
           </div>
